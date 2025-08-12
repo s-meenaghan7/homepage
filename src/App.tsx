@@ -1,12 +1,11 @@
-function App() {
+import { Container, Typography } from "@mui/material"
 
+export default function App() {
     return (
-        <div>
-            <h1 className="text-3xl font-bold justify-self-center">
-                Hello, world!
-            </h1>
-        </div>
-    )
+        <Container>
+            <Typography variant="h3" gutterBottom>
+                Hello, homepage!
+            </Typography>
+        </Container>
+    );
 }
-
-export default App
