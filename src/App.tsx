@@ -1,11 +1,13 @@
 import { Container, Typography } from "@mui/material"
+import NavBar from "./components/navbar";
 
 export default function App() {
     return (
-        <Container>
-            <Typography variant="h3" gutterBottom>
-                Hello, homepage!
-            </Typography>
-        </Container>
+        <>
+            <NavBar />
+            <Container>
+                hello world
+            </Container>
+        </>
     );
 }
