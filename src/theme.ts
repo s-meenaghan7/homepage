@@ -1,0 +1,27 @@
+import { createTheme } from "@mui/material/styles"
+
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: "#1976d2", // Blue
+        },
+        secondary: {
+            main: "#f50057", // Pink
+        },
+        background: {
+            default: "#f4f6f8", // Light gray background
+            paper: "#ffffff", // White for cards, modals
+        },
+        text: {
+            primary: "#333333", // Dark gray text
+            secondary: "#555555", // Lighter gray text
+        },
+    },
+    typography: {
+        button: {
+            textTransform: "none",
+        },
+    },
+})
+
+export default theme
