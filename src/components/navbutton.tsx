@@ -20,9 +20,10 @@ export default function NavButton({
                 gap: 1,
             }}
         >
-            {icon ? <Box component="span" sx={{ display: 'flex', alignItems: 'center' }}>
-                {icon}
-            </Box> : null}
+            {icon ?
+                <Box component="span" sx={{ display: 'flex', alignItems: 'center' }}>
+                    {icon}
+                </Box> : null}
             {children}
         </Button>
     )

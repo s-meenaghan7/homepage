@@ -1,21 +1,20 @@
-import { AppBar, Box, Container, Toolbar } from "@mui/material"
+import { AppBar, Box, Container, IconButton, Toolbar, Tooltip, Typography } from "@mui/material"
 import NavButton from "./navbutton"
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined'
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined'
-import AutoStoriesOutlinedIcon from '@mui/icons-material/AutoStoriesOutlined'
-import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined'
-import EmojiPeopleOutlinedIcon from '@mui/icons-material/EmojiPeopleOutlined'
+import { GitHub, LinkedIn } from "@mui/icons-material"
 
 export default function NavBar() {
     return (
         <AppBar
             position="sticky"
-            sx={{ bgcolor: "inherit", color: "black" }}
+            sx={{ bgcolor: "inherit" }}
         >
             <Container>
                 <Toolbar disableGutters>
                     <NavButton sx={{ flexGrow: 1 }} icon={<HomeOutlinedIcon />}>
-                        Sean Meenaghan
+                        <Typography variant="h6">
+                            Sean Meenaghan
+                        </Typography>
                     </NavButton>
 
                     <Box
@@ -25,16 +24,46 @@ export default function NavBar() {
                             gap: 2,
                         }}
                     >
-                        <NavButton icon={<EmojiPeopleOutlinedIcon />}>
+                        <Tooltip title="LinkedIn">
+                            <IconButton
+                                component="a"
+                                href=""
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <LinkedIn color="primary" />
+                            </IconButton>
+                        </Tooltip>
+
+                        <Tooltip title='GitHub'>
+                            <IconButton
+                                component="a"
+                                href=""
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <GitHub color="primary" />
+                            </IconButton>
+                        </Tooltip>
+                    </Box>
+
+                    <Box
+                        sx={{
+                            display: "flex",
+                            marginLeft: 'auto',
+                            gap: 2,
+                        }}
+                    >
+                        <NavButton>
                             About
                         </NavButton>
-                        <NavButton icon={<VerifiedUserOutlinedIcon />}>
+                        <NavButton>
                             Experience
                         </NavButton>
-                        <NavButton icon={<AutoStoriesOutlinedIcon />}>
+                        <NavButton>
                             Projects
                         </NavButton>
-                        <NavButton icon={<EmailOutlinedIcon />}>
+                        <NavButton>
                             Contact
                         </NavButton>
                     </Box>
