@@ -6,6 +6,8 @@ export default function IntroSection() {
 
     return (
         <Box
+            component="section"
+            id="intro"
             sx={{
                 minHeight: "80vh",
                 display: "flex",

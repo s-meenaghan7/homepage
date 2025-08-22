@@ -1,6 +1,7 @@
 import { Container } from "@mui/material"
 import NavBar from "./components/navbar";
 import IntroSection from "./components/intro-section";
+import ContactSection from "./components/contact-section";
 
 export default function App() {
     return (
@@ -8,7 +9,8 @@ export default function App() {
             <NavBar />
             <Container>
                 <IntroSection />
+                <ContactSection />
             </Container>
         </>
-    );
+    )
 }
