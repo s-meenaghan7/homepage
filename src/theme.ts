@@ -1,27 +1,27 @@
 import { createTheme } from "@mui/material/styles"
 
 const theme = createTheme({
-    palette: {
-        primary: {
-            main: "#333333",
-        },
-        secondary: {
-            main: "#555555",
-        },
-        background: {
-            default: "#f4f6f8", // Light gray background
-            paper: "#ffffff", // White for cards, modals
-        },
-        text: {
-            primary: "#333333", // Dark gray text
-            secondary: "#555555", // Lighter gray text
-        },
+  palette: {
+    primary: {
+      main: "#333333",
     },
-    typography: {
-        button: {
-            textTransform: "none",
-        },
+    secondary: {
+      main: "#555555",
     },
+    background: {
+      default: "#f4f6f8", // Light gray background
+      paper: "#ffffff", // White for cards, modals
+    },
+    text: {
+      primary: "#333333", // Dark gray text
+      secondary: "#555555", // Lighter gray text
+    },
+  },
+  typography: {
+    button: {
+      textTransform: "none",
+    },
+  },
 })
 
 export default theme
