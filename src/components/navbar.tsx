@@ -1,5 +1,4 @@
 import GitHub from "@mui/icons-material/GitHub"
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined"
 import LinkedIn from "@mui/icons-material/LinkedIn"
 import AppBar from "@mui/material/AppBar"
 import Box from "@mui/material/Box"
@@ -8,25 +7,31 @@ import IconButton from "@mui/material/IconButton"
 import { alpha } from "@mui/material/styles"
 import Toolbar from "@mui/material/Toolbar"
 import Tooltip from "@mui/material/Tooltip"
-import Typography from "@mui/material/Typography"
+import useActiveSection from "../hooks/useActiveSection"
 import NavButton from "./navbutton"
 
+const sections = ["intro", "about", "experience", "projects", "contact"]
+
 export default function NavBar() {
+  const activeSection = useActiveSection(sections)
+
   return (
     <AppBar
       position="fixed"
       elevation={0}
       sx={(theme) => ({
-        backgroundColor: alpha(theme.palette.background.paper, 0.8), // translucent
-        backdropFilter: "blur(8px)", // subtle blur effect
-        zIndex: theme.zIndex.drawer + 1, // ensure it's above other components
+        backgroundColor: alpha(theme.palette.background.paper, 0.8),
+        backdropFilter: "blur(8px)",
+        zIndex: theme.zIndex.drawer + 1,
       })}
     >
       <Container>
         <Toolbar disableGutters>
-          <NavButton sx={{ flexGrow: 1 }} icon={<HomeOutlinedIcon />}>
-            <Typography variant="h6">Sean Meenaghan</Typography>
-          </NavButton>
+          <NavButton
+            sectionId="intro"
+            label="Sean Meenaghan"
+            active={activeSection === "intro"}
+          />
 
           <Box
             sx={{
@@ -65,10 +70,14 @@ export default function NavBar() {
               gap: 2,
             }}
           >
-            <NavButton>About</NavButton>
-            <NavButton>Experience</NavButton>
-            <NavButton>Projects</NavButton>
-            <NavButton>Contact</NavButton>
+            {sections.slice(1).map((section) => (
+              <NavButton
+                key={section}
+                sectionId={section}
+                label={section.charAt(0).toUpperCase().concat(section.slice(1))}
+                active={activeSection === section}
+              />
+            ))}
           </Box>
         </Toolbar>
       </Container>
