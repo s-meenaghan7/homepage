@@ -16,7 +16,7 @@ export default function IntroSection() {
       component="section"
       id="intro"
       sx={{
-        minHeight: "80vh",
+        minHeight: "100vh",
         display: "flex",
         alignItems: "center",
         px: 4,
