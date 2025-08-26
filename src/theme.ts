@@ -10,7 +10,7 @@ const theme = createTheme({
     },
     background: {
       default: "#f4f6f8", // Light gray background
-      paper: "#ffffff", // White for cards, modals
+      paper: "#f0f0f0", // slightly more gray
     },
     text: {
       primary: "#333333", // Dark gray text
