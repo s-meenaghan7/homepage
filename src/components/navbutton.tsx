@@ -1,29 +1,36 @@
-import Box from "@mui/material/Box"
 import type { ButtonProps } from "@mui/material/Button"
 import Button from "@mui/material/Button"
 import type React from "react"
 
 interface NavButtonProps extends ButtonProps {
-  icon?: React.ReactNode
+  sectionId: string
+  label: string
+  active: boolean
 }
 
-export default function NavButton({ icon, children, ...props }: NavButtonProps) {
+export default function NavButton({ sectionId, label, active }: NavButtonProps) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+
+    const target = document.getElementById(sectionId)
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
+
   return (
     <Button
       disableRipple
-      {...props}
+      onClick={handleClick}
+      href=""
       sx={{
-        textTransform: "none",
-        alignItems: "center",
-        gap: 1,
+        position: "relative",
+        overflow: "visible",
+        fontWeight: active ? "bold" : "normal",
+        transition: "font-weight 0.1s ease-in-out",
       }}
     >
-      {icon ? (
-        <Box component="span" sx={{ display: "flex", alignItems: "center" }}>
-          {icon}
-        </Box>
-      ) : null}
-      {children}
+      {label}
     </Button>
   )
 }
