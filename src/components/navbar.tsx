@@ -6,6 +6,7 @@ import Container from "@mui/material/Container"
 import { alpha } from "@mui/material/styles"
 import Toolbar from "@mui/material/Toolbar"
 import useActiveSection from "../hooks/useActiveSection"
+import ColorSchemeToggle from "./ColorSchemeToggle"
 import ContactButton from "./ContactButton"
 import NavButton from "./navbutton"
 
@@ -67,6 +68,7 @@ export default function NavBar() {
                 active={activeSection === section}
               />
             ))}
+            <ColorSchemeToggle />
           </Box>
         </Toolbar>
       </Container>

@@ -5,13 +5,15 @@ import Typography from "@mui/material/Typography"
 export default function FormField(props: TextFieldProps) {
   return (
     <Box>
-      <Typography variant="subtitle2" sx={{ mb: 0.5 }}>
+      <Typography
+        variant="subtitle2"
+        sx={{ mb: 0.5 }}
+      >
         {props.name}
         {props.required ? " *" : ""}
       </Typography>
       <TextField
         sx={{
-          bgcolor: "#e0e0e0",
           borderRadius: "8px",
           "& fieldset": {
             border: "none",
