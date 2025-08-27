@@ -9,7 +9,7 @@ interface NavButtonProps extends ButtonProps {
 }
 
 export default function NavButton({ sectionId, label, active }: NavButtonProps) {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
 
     const target = document.getElementById(sectionId)
@@ -22,7 +22,6 @@ export default function NavButton({ sectionId, label, active }: NavButtonProps) 
     <Button
       disableRipple
       onClick={handleClick}
-      href=""
       sx={{
         position: "relative",
         overflow: "visible",
