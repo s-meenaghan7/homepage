@@ -4,7 +4,7 @@ import Button from "@mui/material/Button"
 import Grid from "@mui/material/Grid"
 import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
-import FormField from "./form-field"
+import FormField from "./FormField"
 
 export default function ContactForm() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

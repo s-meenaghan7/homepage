@@ -1,8 +1,8 @@
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
-import ContactForm from "./contact-form"
-import ContactInformation from "./contact-information"
+import ContactForm from "./ContactForm"
+import ContactInformation from "./ContactInformation"
 
 export default function ContactSection() {
   return (

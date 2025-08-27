@@ -1,6 +1,6 @@
 import Container from "@mui/material/Container"
-import ContactSection from "./components/contact-section"
-import IntroSection from "./components/intro-section"
+import ContactSection from "./components/ContactSection"
+import IntroSection from "./components/IntroSection"
 import NavBar from "./components/navbar"
 
 export default function App() {
