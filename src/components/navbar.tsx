@@ -3,11 +3,10 @@ import LinkedIn from "@mui/icons-material/LinkedIn"
 import AppBar from "@mui/material/AppBar"
 import Box from "@mui/material/Box"
 import Container from "@mui/material/Container"
-import IconButton from "@mui/material/IconButton"
 import { alpha } from "@mui/material/styles"
 import Toolbar from "@mui/material/Toolbar"
-import Tooltip from "@mui/material/Tooltip"
 import useActiveSection from "../hooks/useActiveSection"
+import ContactButton from "./ContactButton"
 import NavButton from "./navbutton"
 
 const sections = ["intro", "about", "experience", "projects", "contact"]
@@ -40,27 +39,17 @@ export default function NavBar() {
               gap: 2,
             }}
           >
-            <Tooltip title="LinkedIn">
-              <IconButton
-                component="a"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkedIn color="primary" />
-              </IconButton>
-            </Tooltip>
+            <ContactButton
+              href="https://linkedin.com/in/seanmeenaghan"
+              title="LinkedIn"
+              icon={<LinkedIn />}
+            />
 
-            <Tooltip title="GitHub">
-              <IconButton
-                component="a"
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GitHub color="primary" />
-              </IconButton>
-            </Tooltip>
+            <ContactButton
+              href="https://github.com/s-meenaghan7"
+              title="GitHub"
+              icon={<GitHub />}
+            />
           </Box>
 
           <Box
