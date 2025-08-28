@@ -8,7 +8,7 @@ import Toolbar from "@mui/material/Toolbar"
 import useActiveSection from "../hooks/useActiveSection"
 import ColorSchemeToggle from "./ColorSchemeToggle"
 import ContactButton from "./ContactButton"
-import NavButton from "./navbutton"
+import NavButton from "./NavButton"
 
 const sections = ["intro", "about", "experience", "projects", "contact"]
 

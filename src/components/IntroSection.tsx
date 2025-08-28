@@ -16,10 +16,12 @@ export default function IntroSection() {
       component="section"
       id="intro"
       sx={{
-        minHeight: "100vh",
         display: "flex",
+        minHeight: "100vh",
         alignItems: "center",
-        px: 4,
+        justifyContent: "center",
+        px: { xs: 2, sm: 4, md: 5 },
+        py: { xs: 4, sm: 6, md: 8 },
       }}
     >
       <Grid
@@ -31,15 +33,24 @@ export default function IntroSection() {
       >
         {/* LEFT: Content */}
         <Grid sx={{ maxWidth: 600 }}>
-          <Typography variant="h2" gutterBottom>
+          <Typography
+            variant="h2"
+            gutterBottom
+          >
             Sean Meenaghan
           </Typography>
 
-          <Typography variant="h5" gutterBottom>
+          <Typography
+            variant="h5"
+            gutterBottom
+          >
             Software Engineer | Cloud & Backend-focused
           </Typography>
 
-          <Typography variant="body1" sx={{ maxWidth: 600, mb: 4 }}>
+          <Typography
+            variant="body1"
+            sx={{ maxWidth: 600, mb: 4 }}
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam illum
             consequatur iusto fugit aliquam, exercitationem a recusandae ipsum
             cupiditate amet corrupti beatae modi tenetur perspiciatis autem eius veniam.
@@ -48,18 +59,66 @@ export default function IntroSection() {
 
           {/* Tech summary */}
           <Box>
-            <Stack direction="row" flexWrap="wrap" gap={1}>
-              <Chip size="small" variant="outlined" label="TypeScript" />
-              <Chip size="small" variant="outlined" label="Node.js" />
-              <Chip size="small" variant="outlined" label="Python" />
-              <Chip size="small" variant="outlined" label="React" />
-              <Chip size="small" variant="outlined" label="Material UI" />
-              <Chip size="small" variant="outlined" label="OOP / OOD" />
-              <Chip size="small" variant="outlined" label="Git VCS" />
-              <Chip size="small" variant="outlined" label="GitHub Actions" />
-              <Chip size="small" variant="outlined" label="DataDog" />
-              <Chip size="small" variant="outlined" label="Splunk" />
-              <Chip size="small" variant="outlined" label="Atlassian Administration" />
+            <Stack
+              direction="row"
+              flexWrap="wrap"
+              gap={1}
+            >
+              <Chip
+                size="small"
+                variant="outlined"
+                label="TypeScript"
+              />
+              <Chip
+                size="small"
+                variant="outlined"
+                label="Node.js"
+              />
+              <Chip
+                size="small"
+                variant="outlined"
+                label="Python"
+              />
+              <Chip
+                size="small"
+                variant="outlined"
+                label="React"
+              />
+              <Chip
+                size="small"
+                variant="outlined"
+                label="Material UI"
+              />
+              <Chip
+                size="small"
+                variant="outlined"
+                label="OOP / OOD"
+              />
+              <Chip
+                size="small"
+                variant="outlined"
+                label="Git VCS"
+              />
+              <Chip
+                size="small"
+                variant="outlined"
+                label="GitHub Actions"
+              />
+              <Chip
+                size="small"
+                variant="outlined"
+                label="DataDog"
+              />
+              <Chip
+                size="small"
+                variant="outlined"
+                label="Splunk"
+              />
+              <Chip
+                size="small"
+                variant="outlined"
+                label="Atlassian Administration"
+              />
             </Stack>
           </Box>
         </Grid>
