@@ -1,14 +1,22 @@
 import type { ButtonProps } from "@mui/material/Button"
 import Button from "@mui/material/Button"
-import type React from "react"
+import IconButton from "@mui/material/IconButton"
+import { useTheme } from "@mui/material/styles"
+import Tooltip from "@mui/material/Tooltip"
+import useMediaQuery from "@mui/material/useMediaQuery"
+import type { JSX } from "react"
 
 interface NavButtonProps extends ButtonProps {
-  sectionId: string
   label: string
   active: boolean
+  sectionId: string
+  icon: JSX.Element
 }
 
-export default function NavButton({ sectionId, label, active }: NavButtonProps) {
+export default function NavButton({ sectionId, label, active, icon }: NavButtonProps) {
+  const theme = useTheme()
+  const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"))
+
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
 
@@ -18,9 +26,24 @@ export default function NavButton({ sectionId, label, active }: NavButtonProps) 
     }
   }
 
+  if (isMediumScreen) {
+    return (
+      <Tooltip title={label}>
+        <IconButton
+          onClick={handleClick}
+          sx={{
+            color: "text.primary",
+            fontWeight: active ? "bold" : "normal",
+          }}
+        >
+          {icon}
+        </IconButton>
+      </Tooltip>
+    )
+  }
+
   return (
     <Button
-      disableRipple
       onClick={handleClick}
       sx={{
         position: "relative",

@@ -1,4 +1,3 @@
-import Avatar from "@mui/material/Avatar"
 import Box from "@mui/material/Box"
 import Chip from "@mui/material/Chip"
 import Grid from "@mui/material/Grid"
@@ -28,13 +27,15 @@ export default function IntroSection() {
         container
         spacing={4}
         alignItems="center"
+        justifyItems="center"
         justifyContent="center"
-        direction={isSmallScreen ? "column-reverse" : "row"}
+        direction={{ xs: "column-reverse", lg: "row" }}
+        sx={{ pt: 1 }}
       >
         {/* LEFT: Content */}
         <Grid sx={{ maxWidth: 600 }}>
           <Typography
-            variant="h2"
+            variant={isSmallScreen ? "h3" : "h2"}
             gutterBottom
           >
             Sean Meenaghan
@@ -124,26 +125,23 @@ export default function IntroSection() {
         </Grid>
 
         {/* RIGHT: Picture */}
-        <Grid sx={{ textAlign: "center" }}>
-          {isSmallScreen ? (
-            <Avatar
-              src="/assets/temp_pro_pic.jpg"
-              alt="Sean Meenaghan"
-              sx={{ width: 150, height: 150, margin: "0 auto" }}
-            />
-          ) : (
-            <Box
-              component="img"
-              src="/assets/temp_pro_pic.jpg"
-              alt="Sean Meenaghan"
-              sx={{
-                width: "100%",
-                maxWidth: 400,
-                borderRadius: 4,
-                boxShadow: 3,
-              }}
-            />
-          )}
+        <Grid
+          sx={{
+            textAlign: "center",
+          }}
+        >
+          <Box
+            component="img"
+            src="/assets/temp_pro_pic.jpg"
+            alt="Picture of Sean Meenaghan"
+            sx={{
+              width: { xs: "70%", lg: "100%" },
+              height: "auto",
+              maxWidth: 400,
+              borderRadius: 4,
+              boxShadow: 3,
+            }}
+          />
         </Grid>
       </Grid>
     </Box>
