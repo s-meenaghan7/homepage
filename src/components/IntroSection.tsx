@@ -9,6 +9,7 @@ import useMediaQuery from "@mui/material/useMediaQuery"
 export default function IntroSection() {
   const theme = useTheme()
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"))
+  const isMediumScreen = useMediaQuery(theme.breakpoints.down("lg"))
 
   return (
     <Box
@@ -25,18 +26,18 @@ export default function IntroSection() {
     >
       <Grid
         container
-        spacing={4}
+        spacing={1}
         alignItems="center"
         justifyItems="center"
         justifyContent="center"
         direction={{ xs: "column-reverse", lg: "row" }}
-        sx={{ pt: 1 }}
       >
         {/* LEFT: Content */}
         <Grid sx={{ maxWidth: 600 }}>
           <Typography
             variant={isSmallScreen ? "h3" : "h2"}
             gutterBottom
+            align={isMediumScreen ? "center" : "left"}
           >
             Sean Meenaghan
           </Typography>
@@ -44,6 +45,7 @@ export default function IntroSection() {
           <Typography
             variant="h5"
             gutterBottom
+            align={isMediumScreen ? "center" : "left"}
           >
             Software Engineer | Cloud & Backend-focused
           </Typography>
@@ -51,6 +53,7 @@ export default function IntroSection() {
           <Typography
             variant="body1"
             sx={{ maxWidth: 600, mb: 4 }}
+            align={isMediumScreen ? "center" : "left"}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam illum
             consequatur iusto fugit aliquam, exercitationem a recusandae ipsum
@@ -61,6 +64,7 @@ export default function IntroSection() {
           {/* Tech summary */}
           <Box>
             <Stack
+              justifyContent={isMediumScreen ? "center" : "left"}
               direction="row"
               flexWrap="wrap"
               gap={1}
