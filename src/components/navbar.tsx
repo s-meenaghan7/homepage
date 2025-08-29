@@ -1,5 +1,10 @@
+import AutoStoriesOutlinedIcon from "@mui/icons-material/AutoStoriesOutlined"
+import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined"
 import GitHub from "@mui/icons-material/GitHub"
+import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined"
 import LinkedIn from "@mui/icons-material/LinkedIn"
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined"
+import WorkOutlineIcon from "@mui/icons-material/WorkOutline"
 import AppBar from "@mui/material/AppBar"
 import Box from "@mui/material/Box"
 import Container from "@mui/material/Container"
@@ -10,10 +15,31 @@ import ColorSchemeToggle from "./ColorSchemeToggle"
 import ContactButton from "./ContactButton"
 import NavButton from "./NavButton"
 
-const sections = ["intro", "about", "experience", "projects", "contact"]
+const sections = [
+  {
+    id: "about",
+    label: "About",
+    icon: <PersonOutlineOutlinedIcon />,
+  },
+  {
+    id: "experience",
+    label: "Experience",
+    icon: <WorkOutlineIcon />,
+  },
+  {
+    id: "projects",
+    label: "Projects",
+    icon: <AutoStoriesOutlinedIcon />,
+  },
+  {
+    id: "contact",
+    label: "Contact",
+    icon: <EmailOutlinedIcon />,
+  },
+]
 
 export default function NavBar() {
-  const activeSection = useActiveSection(sections)
+  const activeSection = useActiveSection(sections.map((s) => s.id))
 
   return (
     <AppBar
@@ -31,6 +57,7 @@ export default function NavBar() {
             sectionId="intro"
             label="Sean Meenaghan"
             active={activeSection === "intro"}
+            icon={<HomeOutlinedIcon />}
           />
 
           <Box
@@ -60,12 +87,13 @@ export default function NavBar() {
               gap: 2,
             }}
           >
-            {sections.slice(1).map((section) => (
+            {sections.map((section) => (
               <NavButton
-                key={section}
-                sectionId={section}
-                label={section.charAt(0).toUpperCase().concat(section.slice(1))}
-                active={activeSection === section}
+                key={section.id}
+                icon={section.icon}
+                label={section.label}
+                sectionId={section.id}
+                active={activeSection === section.id}
               />
             ))}
             <ColorSchemeToggle />
