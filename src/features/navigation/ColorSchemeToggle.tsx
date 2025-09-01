@@ -4,7 +4,7 @@ import IconButton from "@mui/material/IconButton"
 import { useColorScheme } from "@mui/material/styles"
 import Tooltip from "@mui/material/Tooltip"
 
-export default function ColorSchemeToggle() {
+export function ColorSchemeToggle() {
   const { mode, setMode } = useColorScheme()
 
   const toggleMode = (mode: "light" | "dark" | "system" | undefined) => {

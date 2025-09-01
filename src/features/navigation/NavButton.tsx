@@ -13,13 +13,7 @@ interface NavButtonProps {
   onClick: (e: React.MouseEvent<HTMLButtonElement>, sectionId: string) => void
 }
 
-export default function NavButton({
-  sectionId,
-  label,
-  active,
-  icon,
-  onClick,
-}: NavButtonProps) {
+export function NavButton({ sectionId, label, active, icon, onClick }: NavButtonProps) {
   const theme = useTheme()
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"))
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"))

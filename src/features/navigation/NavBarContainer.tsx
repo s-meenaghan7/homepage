@@ -8,9 +8,9 @@ import Container from "@mui/material/Container"
 import { alpha, useTheme } from "@mui/material/styles"
 import useMediaQuery from "@mui/material/useMediaQuery"
 import type { JSX } from "react"
-import useActiveSection from "../hooks/useActiveSection"
-import NavBarMobile from "./NavBarMobile"
-import NavBarStandard from "./NavBarStandard"
+import { useActiveSection } from "./hooks/useActiveSection"
+import { NavBarMobile } from "./NavBarMobile"
+import { NavBarStandard } from "./NavBarStandard"
 
 const handleClick = (e: React.MouseEvent<HTMLButtonElement>, sectionId: string) => {
   e.preventDefault()
@@ -61,7 +61,7 @@ const navButtons: NavButtonConfig[] = [
   },
 ]
 
-export default function NavBarContainer() {
+export function NavBarContainer() {
   const theme = useTheme()
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"))
   const activeSection = useActiveSection(navButtons.map((s) => s.id))
