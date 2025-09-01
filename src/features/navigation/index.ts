@@ -1,4 +1,5 @@
 export * from "./ColorSchemeToggle"
+export * from "./config"
 export * from "./NavBarContainer"
 export * from "./NavBarMobile"
 export * from "./NavBarStandard"
