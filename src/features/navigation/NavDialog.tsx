@@ -4,7 +4,7 @@ import Dialog from "@mui/material/Dialog"
 import DialogContent from "@mui/material/DialogContent"
 import IconButton from "@mui/material/IconButton"
 import type { NavButtonConfig } from "./NavBarContainer"
-import NavButton from "./NavButton"
+import { NavButton } from "./NavButton"
 
 interface NavDialogProps {
   open: boolean
@@ -12,7 +12,7 @@ interface NavDialogProps {
   navButtons: NavButtonConfig[]
 }
 
-export default function NavDialog({ open, onClose, navButtons }: NavDialogProps) {
+export function NavDialog({ open, onClose, navButtons }: NavDialogProps) {
   return (
     <Dialog
       open={open}

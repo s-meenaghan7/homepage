@@ -4,27 +4,27 @@ import LinkedIn from "@mui/icons-material/LinkedIn"
 import Grid from "@mui/material/Grid"
 import Stack from "@mui/material/Stack"
 import Typography from "@mui/material/Typography"
-import ContactButton from "./ContactButton"
+import { ContactButton } from "../../common/ContactButton"
 
 const contactButtons = [
   {
-    href: "mailto:seanmeenaghan@email.com",
     title: "Email me",
     icon: <Email fontSize="large" />,
+    href: "mailto:seanmeenaghan@email.com",
   },
   {
-    href: "https://linkedin.com/in/seanmeenaghan",
     title: "LinkedIn",
     icon: <LinkedIn fontSize="large" />,
+    href: "https://linkedin.com/in/seanmeenaghan",
   },
   {
-    href: "https://github.com/s-meenaghan7",
     title: "GitHub",
     icon: <GitHub fontSize="large" />,
+    href: "https://github.com/s-meenaghan7",
   },
 ]
 
-export default function ContactInformation() {
+export function ContactInformation() {
   return (
     <Grid size={{ xs: 12, md: 5 }}>
       <Typography

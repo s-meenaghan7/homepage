@@ -2,20 +2,17 @@ import GitHub from "@mui/icons-material/GitHub"
 import LinkedIn from "@mui/icons-material/LinkedIn"
 import Box from "@mui/material/Box"
 import Toolbar from "@mui/material/Toolbar"
-import ColorSchemeToggle from "./ColorSchemeToggle"
-import ContactButton from "./ContactButton"
+import { ContactButton } from "../../common"
+import { ColorSchemeToggle } from "./ColorSchemeToggle"
 import type { NavButtonConfig } from "./NavBarContainer"
-import NavButton from "./NavButton"
+import { NavButton } from "./NavButton"
 
 interface NavBarStandardProps {
   navButtons: NavButtonConfig[]
   activeSection: string
 }
 
-export default function NavBarStandard({
-  navButtons,
-  activeSection,
-}: NavBarStandardProps) {
+export function NavBarStandard({ navButtons, activeSection }: NavBarStandardProps) {
   const [homeButton, ...navButtonConfigs] = navButtons
 
   return (

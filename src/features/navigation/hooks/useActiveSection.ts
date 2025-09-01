@@ -5,7 +5,7 @@ import { useEffect, useState } from "react"
  * @param sectionIds - string IDs pertaining to each page section.
  * @returns the section ID string that is currently visible.
  */
-export default function useActiveSection(sectionIds: string[]) {
+export function useActiveSection(sectionIds: string[]) {
   const [active, setActive] = useState<string | null>(null)
 
   useEffect(() => {

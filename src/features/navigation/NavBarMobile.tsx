@@ -4,13 +4,13 @@ import Toolbar from "@mui/material/Toolbar"
 import Tooltip from "@mui/material/Tooltip"
 import { useState } from "react"
 import type { NavButtonConfig } from "./NavBarContainer"
-import NavDialog from "./NavDialog"
+import { NavDialog } from "./NavDialog"
 
 interface NavBarMobileProps {
   navButtons: NavButtonConfig[]
 }
 
-export default function NavBarMobile({ navButtons }: NavBarMobileProps) {
+export function NavBarMobile({ navButtons }: NavBarMobileProps) {
   const [open, setOpen] = useState(false)
   const [homeButton, ...navButtonConfigs] = navButtons
 

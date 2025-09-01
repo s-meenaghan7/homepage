@@ -1,10 +1,10 @@
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
-import ContactForm from "./ContactForm"
-import ContactInformation from "./ContactInformation"
+import { ContactForm } from "./ContactForm"
+import { ContactInformation } from "./ContactInformation"
 
-export default function ContactSection() {
+export function ContactSection() {
   return (
     <Box
       component="section"
@@ -20,7 +20,11 @@ export default function ContactSection() {
       }}
     >
       {/* Header */}
-      <Typography variant="h3" gutterBottom align="center">
+      <Typography
+        variant="h3"
+        gutterBottom
+        align="center"
+      >
         Connect with me
       </Typography>
       <Typography
@@ -32,7 +36,11 @@ export default function ContactSection() {
         non ratione porro saepe adipisci voluptatum voluptatem explicabo! Debitis!
       </Typography>
 
-      <Grid container spacing={6} sx={{ width: "100%" }}>
+      <Grid
+        container
+        spacing={6}
+        sx={{ width: "100%" }}
+      >
         <ContactForm />
         <ContactInformation />
       </Grid>

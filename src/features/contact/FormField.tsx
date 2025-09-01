@@ -2,7 +2,7 @@ import Box from "@mui/material/Box"
 import TextField, { type TextFieldProps } from "@mui/material/TextField"
 import Typography from "@mui/material/Typography"
 
-export default function FormField(props: TextFieldProps) {
+export function FormField(props: TextFieldProps) {
   return (
     <Box>
       <Typography

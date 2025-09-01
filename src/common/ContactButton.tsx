@@ -7,7 +7,7 @@ interface ContactButtonProps {
   icon: React.ReactNode
 }
 
-export default function ContactButton({ title, href, icon }: ContactButtonProps) {
+export function ContactButton({ title, href, icon }: ContactButtonProps) {
   return (
     <Tooltip title={title}>
       <IconButton

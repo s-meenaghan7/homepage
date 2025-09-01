@@ -1,7 +1,7 @@
 import Container from "@mui/material/Container"
-import ContactSection from "./components/ContactSection"
-import IntroSection from "./components/IntroSection"
-import NavBarContainer from "./components/NavBarContainer"
+import { ContactSection } from "./features/contact"
+import { IntroSection } from "./features/intro"
+import { NavBarContainer } from "./features/navigation"
 
 export default function App() {
   return (

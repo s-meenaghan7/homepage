@@ -6,7 +6,7 @@ import { useTheme } from "@mui/material/styles"
 import Typography from "@mui/material/Typography"
 import useMediaQuery from "@mui/material/useMediaQuery"
 
-export default function IntroSection() {
+export function IntroSection() {
   const theme = useTheme()
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"))
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("lg"))
