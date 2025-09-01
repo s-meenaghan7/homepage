@@ -1,15 +1,14 @@
 import GitHub from "@mui/icons-material/GitHub"
-import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined"
 import LinkedIn from "@mui/icons-material/LinkedIn"
 import Box from "@mui/material/Box"
 import Toolbar from "@mui/material/Toolbar"
-import type { JSX } from "react"
 import ColorSchemeToggle from "./ColorSchemeToggle"
 import ContactButton from "./ContactButton"
+import type { NavButtonConfig } from "./NavBarContainer"
 import NavButton from "./NavButton"
 
 interface NavBarStandardProps {
-  navButtons: { id: string; label: string; icon: JSX.Element }[]
+  navButtons: NavButtonConfig[]
   activeSection: string
 }
 
@@ -17,14 +16,19 @@ export default function NavBarStandard({
   navButtons,
   activeSection,
 }: NavBarStandardProps) {
+  const [homeButton, ...navButtonConfigs] = navButtons
+
   return (
     <Toolbar disableGutters>
-      <NavButton
-        sectionId="intro"
-        label="Sean Meenaghan"
-        active={activeSection === "intro"}
-        icon={<HomeOutlinedIcon />}
-      />
+      {homeButton && (
+        <NavButton
+          icon={homeButton.icon}
+          label={homeButton.label}
+          sectionId={homeButton.id}
+          onClick={homeButton.onClick}
+          active={activeSection === homeButton.id}
+        />
+      )}
 
       <Box
         sx={{
@@ -34,15 +38,15 @@ export default function NavBarStandard({
         }}
       >
         <ContactButton
-          href="https://linkedin.com/in/seanmeenaghan"
           title="LinkedIn"
           icon={<LinkedIn />}
+          href="https://linkedin.com/in/seanmeenaghan"
         />
 
         <ContactButton
-          href="https://github.com/s-meenaghan7"
           title="GitHub"
           icon={<GitHub />}
+          href="https://github.com/s-meenaghan7"
         />
       </Box>
 
@@ -53,15 +57,17 @@ export default function NavBarStandard({
           gap: 2,
         }}
       >
-        {navButtons.map((btn) => (
+        {navButtonConfigs.map((btn) => (
           <NavButton
             key={btn.id}
             icon={btn.icon}
             label={btn.label}
             sectionId={btn.id}
+            onClick={btn.onClick}
             active={activeSection === btn.id}
           />
         ))}
+
         <ColorSchemeToggle />
       </Box>
     </Toolbar>
