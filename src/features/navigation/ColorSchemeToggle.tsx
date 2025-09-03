@@ -22,7 +22,7 @@ export function ColorSchemeToggle() {
   return (
     <Tooltip
       title={`Change to ${toggleMode(mode)} mode`}
-      enterDelay={500}
+      enterDelay={100}
     >
       <IconButton onClick={handleClick}>
         {mode === "dark" ? <LightModeOutlinedIcon /> : <DarkModeOutlinedIcon />}
