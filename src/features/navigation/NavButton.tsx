@@ -19,6 +19,7 @@ export function NavButton({ sectionId, label, active, icon, onClick }: NavButton
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"))
 
   if (isSmallScreen) {
+    // Renders inside the NavDialog
     return (
       <Button
         size="large"

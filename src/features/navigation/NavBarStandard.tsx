@@ -18,8 +18,8 @@ export function NavBarStandard({ navButtons, activeSection }: NavBarStandardProp
     <Toolbar disableGutters>
       {homeButton && (
         <NavButton
+          label="Home"
           icon={homeButton.icon}
-          label={homeButton.label}
           sectionId={homeButton.id}
           onClick={homeButton.onClick}
           active={activeSection === homeButton.id}
