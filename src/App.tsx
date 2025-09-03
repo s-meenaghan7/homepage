@@ -11,8 +11,8 @@ export default function App() {
       <Container>
         <IntroSection />
         <ContactSection />
-        <Footer />
       </Container>
+      <Footer />
     </>
   )
 }

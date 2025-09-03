@@ -1,5 +1,20 @@
 import { createTheme } from "@mui/material/styles"
 
+// module augmentation to extend ThemeOptions in createTheme
+declare module "@mui/material/styles" {
+  interface Palette {
+    footer: {
+      bgColor: string
+    }
+  }
+  // allow configuration using `createTheme()`
+  interface PaletteOptions {
+    footer?: {
+      bgColor?: string
+    }
+  }
+}
+
 const theme = createTheme({
   colorSchemes: {
     dark: {
@@ -13,6 +28,9 @@ const theme = createTheme({
         text: {
           primary: "#f5f5f5",
           secondary: "rgba(255,255,255,0.7)",
+        },
+        footer: {
+          bgColor: "#454545",
         },
       },
     },
@@ -31,6 +49,9 @@ const theme = createTheme({
         text: {
           primary: "#1a1a1a",
           secondary: "rgba(0,0,0,0.6)",
+        },
+        footer: {
+          bgColor: "#e0e0e0",
         },
       },
     },

@@ -3,7 +3,7 @@ import IconButton from "@mui/material/IconButton"
 import Toolbar from "@mui/material/Toolbar"
 import Tooltip from "@mui/material/Tooltip"
 import { useState } from "react"
-import type { NavButtonConfig } from "./NavBarContainer"
+import type { NavButtonConfig } from "./config"
 import { NavDialog } from "./NavDialog"
 
 interface NavBarMobileProps {

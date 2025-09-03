@@ -3,7 +3,7 @@ import Box from "@mui/material/Box"
 import Dialog from "@mui/material/Dialog"
 import DialogContent from "@mui/material/DialogContent"
 import IconButton from "@mui/material/IconButton"
-import type { NavButtonConfig } from "./NavBarContainer"
+import type { NavButtonConfig } from "./config"
 import { NavButton } from "./NavButton"
 
 interface NavDialogProps {
