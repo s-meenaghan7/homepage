@@ -1,10 +1,9 @@
-import GitHub from "@mui/icons-material/GitHub"
-import LinkedIn from "@mui/icons-material/LinkedIn"
 import Box from "@mui/material/Box"
 import Toolbar from "@mui/material/Toolbar"
-import { ContactButton } from "../../common"
+import { GitHubButton } from "../../common/GitHubButton"
+import { LinkedInButton } from "../../common/LinkedInButton"
 import { ColorSchemeToggle } from "./ColorSchemeToggle"
-import type { NavButtonConfig } from "./NavBarContainer"
+import type { NavButtonConfig } from "./config"
 import { NavButton } from "./NavButton"
 
 interface NavBarStandardProps {
@@ -34,17 +33,8 @@ export function NavBarStandard({ navButtons, activeSection }: NavBarStandardProp
           gap: 2,
         }}
       >
-        <ContactButton
-          title="LinkedIn"
-          icon={<LinkedIn />}
-          href="https://linkedin.com/in/seanmeenaghan"
-        />
-
-        <ContactButton
-          title="GitHub"
-          icon={<GitHub />}
-          href="https://github.com/s-meenaghan7"
-        />
+        <LinkedInButton />
+        <GitHubButton />
       </Box>
 
       <Box
