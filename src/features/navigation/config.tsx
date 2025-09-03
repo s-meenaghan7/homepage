@@ -5,7 +5,10 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline"
 import type { JSX } from "react"
 
-const navButtonClick = (e: React.MouseEvent<HTMLButtonElement>, sectionId: string) => {
+const navButtonClick = (
+  e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+  sectionId: string
+) => {
   e.preventDefault()
 
   const target = document.getElementById(sectionId)

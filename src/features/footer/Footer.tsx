@@ -1,9 +1,17 @@
 import Box from "@mui/material/Box"
 import Container from "@mui/material/Container"
+import Divider from "@mui/material/Divider"
 import Grid from "@mui/material/Grid"
+import Link from "@mui/material/Link"
 import { useTheme } from "@mui/material/styles"
 import Typography from "@mui/material/Typography"
 import useMediaQuery from "@mui/material/useMediaQuery"
+import { EmailButton } from "../../common/EmailButton"
+import { GitHubButton } from "../../common/GitHubButton"
+import { LinkedInButton } from "../../common/LinkedInButton"
+import { navButtonsConfig } from "../navigation"
+import { FooterLink } from "./FooterLink"
+import { FooterSection } from "./FooterSection"
 
 export function Footer() {
   const theme = useTheme()
@@ -15,7 +23,7 @@ export function Footer() {
       sx={{
         py: 4,
         mt: "auto",
-        // TODO: backgroundColor based on theme. Slightly darker on light mode; slightly lighter on dark mode.
+        bgcolor: theme.palette.footer.bgColor,
       }}
     >
       <Container>
@@ -26,20 +34,16 @@ export function Footer() {
           justifyContent="space-between"
           flexDirection={isSmallScreen ? "column" : "row"}
           sx={{
+            mb: 3,
+            pr: 10,
             flexGrow: 0,
             flexShrink: 1,
             flexBasis: "auto",
           }}
         >
-          {/* Left: About / branding / social icons */}
-          <Grid>
+          <FooterSection title="Sean Meenaghan">
             <Typography
-              variant="subtitle1"
-              gutterBottom
-            >
-              Sean Meenaghan
-            </Typography>
-            <Typography
+              mb={2}
               variant="body2"
               color="text.secondary"
             >
@@ -47,34 +51,39 @@ export function Footer() {
               neque est corporis.
             </Typography>
 
-            {/* TODO: social icons below, in a row */}
-          </Grid>
+            <Box>
+              <EmailButton />
+              <LinkedInButton />
+              <GitHubButton />
+            </Box>
+          </FooterSection>
 
-          {/*  Middle: quick links */}
-          <Grid>
-            <Typography
-              variant="subtitle1"
-              gutterBottom
-            >
-              Quick Links
-            </Typography>
-            {/* TODO: list of link components. Possibly reuse the config.tsx from navigation? Have FooterLink components to display the icon with the Label. But these are Links, not Buttons! */}
-          </Grid>
+          <FooterSection title="Quick Links">
+            {navButtonsConfig.slice(1).map((link) => (
+              <FooterLink
+                id={link.id}
+                key={link.id}
+                label={link.label}
+                onClick={link.onClick}
+              />
+            ))}
+          </FooterSection>
 
-          {/* Right: Get In Touch */}
-          <Grid>
-            <Typography
-              variant="subtitle1"
-              gutterBottom
+          <FooterSection title="Get In Touch">
+            <Link
+              underline="hover"
+              variant="subtitle2"
+              href="mailto:seanmeenaghan@gmail.com"
             >
-              Get In Touch
-            </Typography>
-            {/* TODO: email link and "Send me a message!" to go back to Contact section */}
-          </Grid>
+              seanmeenaghan@gmail.com
+            </Link>
+          </FooterSection>
         </Grid>
 
+        <Divider sx={{ my: 2 }} />
+
         {/* Bottom bar / copyright */}
-        <Box my={4}>
+        <Box>
           <Typography
             variant="body2"
             color="text.secondary"
