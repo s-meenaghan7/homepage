@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography"
 import { ContactForm } from "./ContactForm"
 import { ContactInformation } from "./ContactInformation"
 
-export function ContactSection() {
+export function Contact() {
   return (
     <Box
       component="section"
