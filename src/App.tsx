@@ -1,4 +1,5 @@
 import Container from "@mui/material/Container"
+import { About } from "./features/about"
 import { ContactSection } from "./features/contact"
 import { Footer } from "./features/footer"
 import { IntroSection } from "./features/intro"
@@ -10,6 +11,7 @@ export default function App() {
       <NavBarContainer />
       <Container>
         <IntroSection />
+        <About />
         <ContactSection />
       </Container>
       <Footer />
