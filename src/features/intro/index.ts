@@ -1,1 +1,1 @@
-export * from "./IntroSection"
+export * from "./Intro"
