@@ -10,6 +10,7 @@ import { EmailButton } from "../../common/EmailButton"
 import { GitHubButton } from "../../common/GitHubButton"
 import { LinkedInButton } from "../../common/LinkedInButton"
 import { navButtonsConfig } from "../navigation"
+import { BackToTopButton } from "./BackToTopButton"
 import { FooterLink } from "./FooterLink"
 import { FooterSection } from "./FooterSection"
 
@@ -21,7 +22,8 @@ export function Footer() {
     <Box
       component="footer"
       sx={{
-        py: 4,
+        pt: 4,
+        pb: 2,
         mt: "auto",
         bgcolor: theme.palette.footer.bgColor,
       }}
@@ -83,13 +85,21 @@ export function Footer() {
         <Divider sx={{ my: 2 }} />
 
         {/* Bottom bar / copyright */}
-        <Box>
+        <Box
+          gap={2}
+          display="flex"
+          alignItems="center"
+          justifyContent="space-between"
+          flexDirection={isSmallScreen ? "column" : "row"}
+        >
           <Typography
             variant="body2"
             color="text.secondary"
           >
             © {new Date().getFullYear()} Sean Meenaghan. All rights reserved.
           </Typography>
+
+          <BackToTopButton />
         </Box>
       </Container>
     </Box>
