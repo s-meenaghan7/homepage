@@ -18,7 +18,12 @@ export function FooterSection({ title, children }: FooterSectionProps) {
       >
         {title}
       </Typography>
-      {children}
+      <Grid
+        display="flex"
+        flexDirection="column"
+      >
+        {children}
+      </Grid>
     </Grid>
   )
 }
