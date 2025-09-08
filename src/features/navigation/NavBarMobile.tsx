@@ -9,10 +9,11 @@ import type { NavButtonConfig } from "./config"
 import { NavDialog } from "./NavDialog"
 
 interface NavBarMobileProps {
+  activeSection: string
   navButtons: NavButtonConfig[]
 }
 
-export function NavBarMobile({ navButtons }: NavBarMobileProps) {
+export function NavBarMobile({ navButtons, activeSection }: NavBarMobileProps) {
   const [open, setOpen] = useState(false)
   const [homeButton, ...navButtonConfigs] = navButtons
 
@@ -49,6 +50,7 @@ export function NavBarMobile({ navButtons }: NavBarMobileProps) {
       <NavDialog
         open={open}
         onClose={closeDialog}
+        activeSection={activeSection}
         navButtons={navButtonConfigs}
       />
     </Toolbar>

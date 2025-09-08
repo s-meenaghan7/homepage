@@ -24,7 +24,10 @@ export function NavBarContainer() {
     >
       <Container>
         {isSmallScreen ? (
-          <NavBarMobile navButtons={navButtonsConfig} />
+          <NavBarMobile
+            activeSection={activeSection ?? ""}
+            navButtons={navButtonsConfig}
+          />
         ) : (
           <NavBarStandard
             activeSection={activeSection ?? ""}
