@@ -3,6 +3,7 @@ import Box from "@mui/material/Box"
 import Dialog from "@mui/material/Dialog"
 import DialogContent from "@mui/material/DialogContent"
 import IconButton from "@mui/material/IconButton"
+import { useTheme } from "@mui/material/styles"
 import type { NavButtonConfig } from "./config"
 import { NavButton } from "./NavButton"
 
@@ -13,6 +14,8 @@ interface NavDialogProps {
 }
 
 export function NavDialog({ open, onClose, navButtons }: NavDialogProps) {
+  const theme = useTheme()
+
   return (
     <Dialog
       open={open}
@@ -21,7 +24,10 @@ export function NavDialog({ open, onClose, navButtons }: NavDialogProps) {
       slotProps={{
         paper: {
           sx: {
-            backgroundColor: "rgba(0,0,0,0.6)",
+            backgroundColor:
+              theme.palette.mode === "dark"
+                ? "rgba(0,0,0,0.6)"
+                : "rgba(255,255,255,0.8)",
             backdropFilter: "blur(2px)",
             boxShadow: "none",
             display: "flex",
