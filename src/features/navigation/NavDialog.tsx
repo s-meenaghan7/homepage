@@ -10,10 +10,16 @@ import { NavButton } from "./NavButton"
 interface NavDialogProps {
   open: boolean
   onClose: () => void
+  activeSection: string
   navButtons: NavButtonConfig[]
 }
 
-export function NavDialog({ open, onClose, navButtons }: NavDialogProps) {
+export function NavDialog({
+  open,
+  onClose,
+  activeSection,
+  navButtons,
+}: NavDialogProps) {
   const theme = useTheme()
 
   return (
@@ -69,7 +75,7 @@ export function NavDialog({ open, onClose, navButtons }: NavDialogProps) {
               icon={btn.icon}
               label={btn.label}
               sectionId={btn.id}
-              active={false}
+              active={activeSection === btn.id}
               onClick={(e) => {
                 onClose()
                 btn.onClick(e, btn.id)
