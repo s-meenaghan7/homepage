@@ -1,8 +1,10 @@
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded"
+import Box from "@mui/material/Box"
 import IconButton from "@mui/material/IconButton"
 import Toolbar from "@mui/material/Toolbar"
 import Tooltip from "@mui/material/Tooltip"
 import { useState } from "react"
+import { ColorSchemeToggle } from "./ColorSchemeToggle"
 import type { NavButtonConfig } from "./config"
 import { NavDialog } from "./NavDialog"
 
@@ -32,11 +34,17 @@ export function NavBarMobile({ navButtons }: NavBarMobileProps) {
         </Tooltip>
       )}
 
-      <Tooltip title="Menu">
-        <IconButton onClick={openDialog}>
-          <MenuRoundedIcon />
-        </IconButton>
-      </Tooltip>
+      <Box
+        display="flex"
+        gap={1}
+      >
+        <ColorSchemeToggle />
+        <Tooltip title="Menu">
+          <IconButton onClick={openDialog}>
+            <MenuRoundedIcon />
+          </IconButton>
+        </Tooltip>
+      </Box>
 
       <NavDialog
         open={open}
