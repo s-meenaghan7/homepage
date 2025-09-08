@@ -79,6 +79,14 @@ export function Footer() {
             >
               seanmeenaghan@gmail.com
             </Link>
+
+            <Link
+              underline="hover"
+              variant="subtitle2"
+              href="tel:+13603911345"
+            >
+              (360) 391-1345
+            </Link>
           </FooterSection>
         </Grid>
 
