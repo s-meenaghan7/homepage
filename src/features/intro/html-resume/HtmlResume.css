@@ -1,0 +1,48 @@
+/* Resume paper */
+.resume {
+  background-color: #fafafa;
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem 2rem;
+  padding-bottom: 5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Century Gothic", Roboto, sans-serif;
+  color: #333;
+}
+
+.resume-header h1 {
+  font-weight: normal;
+}
+
+.resume-section h2 {
+  font-size: large;
+  font-weight: normal;
+}
+
+.resume-experience-item {
+  padding-left: 7.5%;
+}
+
+.resume-experience-item > p {
+  margin: 0;
+}
+
+.experience-header {
+  font-weight: bold;
+}
+
+/* Mobile scaling effect */
+@media (max-width: 600px) {
+  .resume {
+    padding: 1rem 1rem;
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 400px) {
+  .resume {
+    padding: 1rem 1rem;
+    font-size: x-small;
+  }
+}

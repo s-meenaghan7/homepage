@@ -1,12 +1,11 @@
-import TaskOutlinedIcon from "@mui/icons-material/TaskOutlined"
 import Box from "@mui/material/Box"
-import Button from "@mui/material/Button"
 import Grid from "@mui/material/Grid"
 import { useTheme } from "@mui/material/styles"
 import Typography from "@mui/material/Typography"
 import useMediaQuery from "@mui/material/useMediaQuery"
-import { HtmlSvg } from "./HtmlSvg"
+import { DownloadCvButton } from "./DownloadCvButton"
 import { TechSummary } from "./TechSummary"
+import { ViewHtmlCvButton } from "./ViewHtmlCvButton"
 
 export function Intro() {
   const theme = useTheme()
@@ -75,19 +74,8 @@ export function Intro() {
             display="flex"
             justifyContent={isMediumScreen ? "center" : "left"}
           >
-            <Button
-              variant="contained"
-              startIcon={<TaskOutlinedIcon />}
-            >
-              Download CV
-            </Button>
-
-            <Button
-              variant="contained"
-              startIcon={<HtmlSvg />}
-            >
-              View HTML CV
-            </Button>
+            <DownloadCvButton />
+            <ViewHtmlCvButton />
           </Box>
 
           <TechSummary />

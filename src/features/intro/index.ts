@@ -1,2 +1,6 @@
+export * from "./DownloadCvButton"
 export * from "./HtmlSvg"
 export * from "./Intro"
+export * from "./ResumeDialog"
+export * from "./TechSummary"
+export * from "./ViewHtmlCvButton"
