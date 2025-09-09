@@ -76,14 +76,14 @@ export function Intro() {
             justifyContent={isMediumScreen ? "center" : "left"}
           >
             <Button
-              variant="outlined"
+              variant="contained"
               startIcon={<TaskOutlinedIcon />}
             >
               Download CV
             </Button>
 
             <Button
-              variant="outlined"
+              variant="contained"
               startIcon={<HtmlSvg />}
             >
               View HTML CV
