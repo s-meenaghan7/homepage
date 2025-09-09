@@ -1,10 +1,12 @@
+import TaskOutlinedIcon from "@mui/icons-material/TaskOutlined"
 import Box from "@mui/material/Box"
-import Chip from "@mui/material/Chip"
+import Button from "@mui/material/Button"
 import Grid from "@mui/material/Grid"
-import Stack from "@mui/material/Stack"
 import { useTheme } from "@mui/material/styles"
 import Typography from "@mui/material/Typography"
 import useMediaQuery from "@mui/material/useMediaQuery"
+import { HtmlSvg } from "./HtmlSvg"
+import { TechSummary } from "./TechSummary"
 
 export function Intro() {
   const theme = useTheme()
@@ -33,99 +35,62 @@ export function Intro() {
         direction={{ xs: "column-reverse", lg: "row" }}
       >
         {/* LEFT: Content */}
-        <Grid sx={{ maxWidth: 600 }}>
-          <Typography
-            variant={isSmallScreen ? "h3" : "h2"}
-            gutterBottom
-            align={isMediumScreen ? "center" : "left"}
-          >
-            Sean Meenaghan
-          </Typography>
-
-          <Typography
-            variant="h5"
-            gutterBottom
-            align={isMediumScreen ? "center" : "left"}
-          >
-            Software Engineer | Cloud & Backend-focused
-          </Typography>
-
-          <Typography
-            variant="body1"
-            sx={{ maxWidth: 600, mb: 4 }}
-            align={isMediumScreen ? "center" : "left"}
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam illum
-            consequatur iusto fugit aliquam, exercitationem a recusandae ipsum
-            cupiditate amet corrupti beatae modi tenetur perspiciatis autem eius veniam.
-            Nisi, id.
-          </Typography>
-
-          {/* Tech summary */}
+        <Grid
+          container
+          spacing={2}
+          sx={{ width: "100%", maxWidth: 600 }}
+        >
           <Box>
-            <Stack
-              justifyContent={isMediumScreen ? "center" : "left"}
-              direction="row"
-              flexWrap="wrap"
-              gap={1}
+            <Typography
+              variant={isSmallScreen ? "h3" : "h2"}
+              gutterBottom
+              align={isMediumScreen ? "center" : "left"}
             >
-              <Chip
-                size="small"
-                variant="outlined"
-                label="TypeScript"
-              />
-              <Chip
-                size="small"
-                variant="outlined"
-                label="Node.js"
-              />
-              <Chip
-                size="small"
-                variant="outlined"
-                label="Python"
-              />
-              <Chip
-                size="small"
-                variant="outlined"
-                label="React"
-              />
-              <Chip
-                size="small"
-                variant="outlined"
-                label="Material UI"
-              />
-              <Chip
-                size="small"
-                variant="outlined"
-                label="OOP / OOD"
-              />
-              <Chip
-                size="small"
-                variant="outlined"
-                label="Git VCS"
-              />
-              <Chip
-                size="small"
-                variant="outlined"
-                label="GitHub Actions"
-              />
-              <Chip
-                size="small"
-                variant="outlined"
-                label="DataDog"
-              />
-              <Chip
-                size="small"
-                variant="outlined"
-                label="Splunk"
-              />
-              <Chip
-                size="small"
-                variant="outlined"
-                label="Atlassian Administration"
-              />
-            </Stack>
+              Sean Meenaghan
+            </Typography>
+
+            <Typography
+              variant="h5"
+              gutterBottom
+              align={isMediumScreen ? "center" : "left"}
+            >
+              Software Engineer | Cloud & Backend-focused
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{ maxWidth: 600 }}
+              align={isMediumScreen ? "center" : "left"}
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam illum
+              consequatur iusto fugit aliquam, exercitationem a recusandae ipsum
+              cupiditate amet corrupti beatae modi tenetur perspiciatis autem eius
+              veniam. Nisi, id.
+            </Typography>
           </Box>
+
+          <Box
+            gap={5}
+            width="100%"
+            display="flex"
+            justifyContent={isMediumScreen ? "center" : "left"}
+          >
+            <Button
+              variant="outlined"
+              startIcon={<TaskOutlinedIcon />}
+            >
+              Download CV
+            </Button>
+
+            <Button
+              variant="outlined"
+              startIcon={<HtmlSvg />}
+            >
+              View HTML CV
+            </Button>
+          </Box>
+
+          <TechSummary />
         </Grid>
 
         {/* RIGHT: Picture */}
