@@ -1,9 +1,21 @@
 import Grid from "@mui/material/Grid"
+import Link from "@mui/material/Link"
 import Typography from "@mui/material/Typography"
 import workExperience from "./experience.data"
 import { WorkExperience } from "./WorkExperience"
 
 export function Experience() {
+  const scrollToIntro = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  const scrollToContact = () => {
+    const contact = document.getElementById("contact")
+    if (contact) {
+      contact.scrollIntoView({ behavior: "smooth", block: "start" })
+    }
+  }
+
   return (
     <Grid
       container
@@ -15,7 +27,7 @@ export function Experience() {
         py: { xs: 4, sm: 6, md: 8 },
       }}
     >
-      <Grid sx={{ p: 2.5 }}>
+      <Grid sx={{ py: 2.5, px: { sm: "inherit" } }}>
         <Typography
           variant="h4"
           gutterBottom
@@ -23,18 +35,50 @@ export function Experience() {
         >
           Work Experience
         </Typography>
-
         <Typography
           variant="subtitle2"
           align="center"
         >
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque reprehenderit
-          fugit aliquam iste numquam magni.
+          Below offers just a glimpse of my contributions in the various roles that I've
+          held. For more details about my experience and how I can add value to your
+          company:{" "}
+          <Link
+            onClick={scrollToIntro}
+            sx={{
+              cursor: "pointer",
+              fontStyle: "italic",
+              transition: "color 300ms ease-out",
+              "&:hover": {
+                color: "#0099ff",
+              },
+            }}
+          >
+            download my resume
+          </Link>{" "}
+          or{" "}
+          <Link
+            onClick={scrollToContact}
+            sx={{
+              cursor: "pointer",
+              fontStyle: "italic",
+              transition: "color 300ms ease-out",
+              "&:hover": {
+                color: "#0099ff",
+              },
+            }}
+          >
+            get in touch
+          </Link>
+          .
         </Typography>
       </Grid>
 
       <Grid justifyItems="center">
-        <Grid>
+        <Grid
+          display="flex"
+          flexDirection="column"
+          gap={3}
+        >
           {workExperience.map((props, i) => (
             <WorkExperience
               key={i}
