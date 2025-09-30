@@ -11,7 +11,8 @@ export function Contact() {
       id="contact"
       sx={{
         flexGrow: 1,
-        p: 4,
+        px: { xs: 0, sm: 2 },
+        py: 9,
         backgroundColor: "background.default",
         color: "text.primary",
         display: "flex",
@@ -21,7 +22,7 @@ export function Contact() {
     >
       {/* Header */}
       <Typography
-        variant="h3"
+        variant="h4"
         gutterBottom
         align="center"
       >
@@ -37,9 +38,11 @@ export function Contact() {
       </Typography>
 
       <Grid
+        spacing={{ xs: 6, md: 2 }}
         container
-        spacing={6}
-        sx={{ width: "100%" }}
+        width="100%"
+        display="flex"
+        flexDirection={{ xs: "column-reverse", md: "row" }}
       >
         <ContactForm />
         <ContactInformation />
