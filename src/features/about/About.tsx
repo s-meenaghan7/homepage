@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid"
 import { useTheme } from "@mui/material/styles"
 import Typography from "@mui/material/Typography"
 import useMediaQuery from "@mui/material/useMediaQuery"
-import { InfoBadge } from "./InfoBadge"
+import { InfoBadge } from "../../common/InfoBadge"
 
 export function About() {
   const theme = useTheme()
@@ -19,22 +19,22 @@ export function About() {
       flexDirection="column"
       sx={{
         px: { xs: 2, sm: 4, md: 5 },
-        py: { xs: 4, sm: 6, md: 8 },
+        py: { xs: 4, sm: 6, md: 9 },
       }}
     >
+      <Typography
+        variant="h4"
+        gutterBottom
+        align="center"
+      >
+        About Me
+      </Typography>
       <Grid
         display="flex"
         justifyContent="space-around"
         flexDirection={isMediumScreen ? "column" : "row"}
       >
         <Box maxWidth={isMediumScreen ? "100%" : "60%"}>
-          <Typography
-            variant="h4"
-            gutterBottom
-            align={isMediumScreen ? "center" : "left"}
-          >
-            About Me
-          </Typography>
           <Typography
             variant="body1"
             gutterBottom

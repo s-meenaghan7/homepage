@@ -38,10 +38,11 @@ export function Experience() {
         <Typography
           variant="subtitle2"
           align="center"
+          px={{ sm: 0, md: 6 }}
         >
           Below offers just a glimpse of my contributions in the various roles that I've
           held. For more details about my experience and how I can add value to your
-          company:{" "}
+          organization:{" "}
           <Link
             onClick={scrollToIntro}
             sx={{
