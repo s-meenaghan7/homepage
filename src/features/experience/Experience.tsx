@@ -21,7 +21,6 @@ export function Experience() {
       container
       id="experience"
       component="section"
-      flexDirection="column"
       sx={{
         px: { xs: 2, sm: 4, md: 5 },
         py: { xs: 4, sm: 6, md: 8 },
