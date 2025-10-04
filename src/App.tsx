@@ -5,6 +5,7 @@ import { Experience } from "./features/experience"
 import { Footer } from "./features/footer"
 import { Intro } from "./features/intro"
 import { NavBarContainer } from "./features/navigation"
+import { Projects } from "./features/projects"
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Intro />
         <About />
         <Experience />
+        <Projects />
         <Contact />
       </Container>
       <Footer />
