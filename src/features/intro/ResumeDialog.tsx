@@ -1,8 +1,7 @@
 import Box from "@mui/material/Box"
 import DialogContent from "@mui/material/DialogContent"
-import Link from "@mui/material/Link"
 import Typography from "@mui/material/Typography"
-import { FullScreenDialog } from "../../common"
+import { FullScreenDialog, StyledLink } from "../../common"
 import { HtmlResume } from "./html-resume"
 
 interface ResumeDialogProps {
@@ -43,24 +42,11 @@ export function ResumeDialog({ open, onClose }: ResumeDialogProps) {
               fontStyle="italic"
             >
               This HTML resume is included as part of the{" "}
-              {
-                <Link
-                  color="inherit"
-                  target="_blank"
-                  underline="always"
-                  href="https://cloudresumechallenge.dev/docs/the-challenge/aws/"
-                  rel="noopener noreferrer"
-                  sx={{
-                    transition: "color 300ms ease-out",
-                    "&:hover": {
-                      color: "#0099ff",
-                    },
-                  }}
-                >
-                  AWS Cloud Resume Challenge.
-                </Link>
-              }{" "}
-              Download my CV instead to ensure you receive the most current copy.
+              <StyledLink
+                text="AWS Cloud Resume Challenge"
+                href="https://cloudresumechallenge.dev/docs/the-challenge/aws/"
+              />
+              . Download my CV instead to ensure you receive the most current copy.
             </Typography>
 
             <HtmlResume />

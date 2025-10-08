@@ -1,6 +1,6 @@
 import Grid from "@mui/material/Grid"
-import Link from "@mui/material/Link"
 import Typography from "@mui/material/Typography"
+import { StyledLink } from "../../common"
 import workExperience from "./experience.data"
 import { WorkExperience } from "./WorkExperience"
 
@@ -39,36 +39,18 @@ export function Experience() {
           align="center"
           px={{ sm: 0, md: 6 }}
         >
-          Below offers just a glimpse of my contributions in the various roles that I've
+          Below offers an overview of my contributions in the various roles that I've
           held. For more details about my experience and how I can add value to your
           organization:{" "}
-          <Link
+          <StyledLink
             onClick={scrollToIntro}
-            sx={{
-              cursor: "pointer",
-              fontStyle: "italic",
-              transition: "color 300ms ease-out",
-              "&:hover": {
-                color: "#0099ff",
-              },
-            }}
-          >
-            download my resume
-          </Link>{" "}
+            text="download my resume"
+          />{" "}
           or{" "}
-          <Link
+          <StyledLink
             onClick={scrollToContact}
-            sx={{
-              cursor: "pointer",
-              fontStyle: "italic",
-              transition: "color 300ms ease-out",
-              "&:hover": {
-                color: "#0099ff",
-              },
-            }}
-          >
-            get in touch
-          </Link>
+            text="get in touch"
+          />
           .
         </Typography>
       </Grid>
