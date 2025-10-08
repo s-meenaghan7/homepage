@@ -2,6 +2,8 @@ import Link from "@mui/material/Link"
 
 interface BaseProps {
   text: string
+  underline?: "always" | "none" | "hover"
+  fontStyle?: "normal" | "italic"
 }
 
 interface StyledHrefLinkProps {
@@ -16,18 +18,24 @@ interface StyledOnClickLinkProps {
 
 type StyledLinkProps = BaseProps & (StyledHrefLinkProps | StyledOnClickLinkProps)
 
-export function StyledLink({ text, onClick, href }: StyledLinkProps) {
+export function StyledLink({
+  text,
+  onClick,
+  href,
+  fontStyle,
+  underline,
+}: StyledLinkProps) {
   return (
     <Link
       color="inherit"
-      underline="always"
+      underline={underline ? underline : "always"}
       href={href ?? undefined}
       onClick={onClick ?? undefined}
       target={href ? "_blank" : undefined}
       rel={href ? "noopener noreferrer" : undefined}
       sx={{
         cursor: "pointer",
-        fontStyle: "italic",
+        fontStyle: fontStyle ? fontStyle : "italic",
         transition: "color 300ms ease-out",
         "&:hover": {
           color: "#0099ff",
