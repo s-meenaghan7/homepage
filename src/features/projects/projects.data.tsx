@@ -19,7 +19,7 @@ const projectsData: ProjectOverviewProps[] = [
   {
     title: "Platform Communications System",
     description:
-      "Mass-email system for communicating to the user base of several platforms, including Jira, Confluence, and PagerDuty. Used Jira Data Center as a frontend. Used GitHub Actions to execute TypeScript code to send emails to the designated users of each mass communication.",
+      "Mass-email system for communicating to the user base of several platforms, including Jira, Confluence, and PagerDuty. Used Jira Data Center as a frontend with GitHub Actions to execute TypeScript code for sending emails to the platform(s) users.",
     techStack: [
       "TypeScript",
       "GitHub Actions",
