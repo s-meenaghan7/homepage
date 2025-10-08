@@ -1,6 +1,7 @@
 import OpenInNewIcon from "@mui/icons-material/OpenInNew"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
+import { StyledLink } from "./StyledLink"
 
 interface InfoBadgeProps {
   icon: React.ReactNode
@@ -34,20 +35,18 @@ export function InfoBadge({ icon, href, title, value }: InfoBadgeProps) {
       </Box>
       <Box px={1}>
         <Typography variant="subtitle1">{title}</Typography>
-        <Typography
-          component={href ? "a" : "p"}
-          target="_blank"
-          referrerPolicy="no-referrer"
-          color="text.secondary"
-          variant="subtitle2"
-          href={href ? href : undefined}
-          sx={{
-            cursor: href ? "pointer" : "arrow",
-            textDecoration: "none",
-          }}
-        >
-          {value}
-          {href ? <OpenInNewIcon sx={{ ml: 0.6, height: 16, width: 16 }} /> : null}
+        <Typography variant="subtitle2">
+          {!href ? (
+            value
+          ) : (
+            <>
+              <StyledLink
+                href={href}
+                text={value}
+              />
+              <OpenInNewIcon sx={{ ml: 0.6, height: 16, width: 16 }} />
+            </>
+          )}
         </Typography>
       </Box>
     </Box>
