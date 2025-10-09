@@ -4,8 +4,10 @@ import Button from "@mui/material/Button"
 export function DownloadCvButton() {
   return (
     <Button
-      id="download-cv-btn"
+      href="/resume.pdf"
       variant="contained"
+      id="download-cv-btn"
+      download="Sean Meenaghan - Resume"
       startIcon={<TaskOutlinedIcon />}
     >
       Download CV
