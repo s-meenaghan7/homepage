@@ -23,9 +23,9 @@ export function FullScreenDialog({ open, onClose, children }: FullScreenDialogPr
           sx: {
             backgroundColor:
               theme.palette.mode === "dark"
-                ? "rgba(0,0,0,0.6)"
+                ? "rgba(0,0,0,0.8)"
                 : "rgba(255,255,255,0.8)",
-            backdropFilter: "blur(2px)",
+            backdropFilter: "blur(3px)",
             boxShadow: "none",
             display: "flex",
             flexDirection: "column",
