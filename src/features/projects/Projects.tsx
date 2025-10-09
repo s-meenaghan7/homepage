@@ -10,6 +10,10 @@ export function Projects() {
       id="projects"
       component="section"
       flexDirection="column"
+      sx={{
+        px: { xs: 2, sm: 4, md: 5 },
+        py: { xs: 4, sm: 6, md: 8 },
+      }}
     >
       <Grid sx={{ py: 2.5, px: { sm: "inherit" } }}>
         <Typography
