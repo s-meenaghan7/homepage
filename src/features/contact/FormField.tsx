@@ -22,6 +22,10 @@ export function FormField(props: TextFieldProps) {
             outline: "3px solid #1976d2",
             transition: "100ms",
           },
+          "& .MuiInputBase-root textarea": {
+            resize: props.multiline ? "both" : "none",
+            overflow: "auto",
+          },
         }}
         name={props.name?.toLowerCase()}
         {...props}
