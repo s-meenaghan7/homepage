@@ -6,6 +6,7 @@ import { Footer } from "./features/footer"
 import { Intro } from "./features/intro"
 import { NavBarContainer } from "./features/navigation"
 import { Projects } from "./features/projects"
+import { VisitorCounter } from "./features/visitor-counter"
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Experience />
         <Projects />
         <Contact />
+        <VisitorCounter />
       </Container>
       <Footer />
     </>

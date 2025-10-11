@@ -12,7 +12,7 @@ export function Contact() {
       sx={{
         flexGrow: 1,
         px: { xs: 0, sm: 2 },
-        py: 9,
+        pt: { xs: 7, sm: 6, md: 9 },
         backgroundColor: "background.default",
         color: "text.primary",
         display: "flex",
