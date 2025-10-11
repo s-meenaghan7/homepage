@@ -1,6 +1,6 @@
 # My Homepage
 
-Frontend source code for my new developer homepage (i.e., portfolio).
+Frontend source code for my developer homepage.
 
 ## 🛠️ Tech Stack
 
