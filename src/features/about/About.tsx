@@ -69,8 +69,7 @@ export function About() {
             <InfoBadge
               icon={<LocationPinIcon />}
               title="Location"
-              value="Lake Stevens, WA"
-              href="https://maps.app.goo.gl/C9kELd4w4ABvPygZA"
+              value="Greater Seattle Area"
             />
           </Box>
         </Box>
