@@ -3,17 +3,20 @@ import Grid from "@mui/material/Grid"
 import { useTheme } from "@mui/material/styles"
 import Typography from "@mui/material/Typography"
 import useMediaQuery from "@mui/material/useMediaQuery"
+import { CaseStudyLink, type CaseStudyLinkProps } from "./CaseStudyLink"
 
 export interface ProjectOverviewProps {
   title: string
   techStack: string[]
   description: string
+  caseStudyLink?: CaseStudyLinkProps
 }
 
 export function ProjectOverview({
   title,
   techStack,
   description,
+  caseStudyLink,
 }: ProjectOverviewProps) {
   const theme = useTheme()
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"))
@@ -32,6 +35,7 @@ export function ProjectOverview({
         >
           {title}
         </Typography>
+
         <Typography
           color="text.secondary"
           variant="body2"
@@ -39,6 +43,8 @@ export function ProjectOverview({
         >
           {description}
         </Typography>
+
+        {caseStudyLink && <CaseStudyLink {...caseStudyLink} />}
 
         <Grid
           display="flex"
