@@ -11,16 +11,6 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
   return (
     <Box
       sx={{
-        "& pre": {
-          backgroundColor: "#f5f5f5",
-          padding: 2,
-          borderRadius: 2,
-          overflowX: "auto",
-        },
-        "& code": {
-          fontFamily: "monospace",
-          fontSize: "0.9rem",
-        },
         "& table": {
           width: "100%",
           borderCollapse: "collapse",
@@ -79,11 +69,7 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
             </li>
           ),
           code({ children }) {
-            return (
-              <Box component="pre">
-                <code>{children}</code>
-              </Box>
-            )
+            return <code>{children}</code>
           },
         }}
       >
