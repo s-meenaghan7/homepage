@@ -49,11 +49,7 @@ export function CaseStudy() {
   }
 
   return (
-    <Box
-      border="1px solid red"
-      sx={{ maxWidth: 900, mx: "auto", mt: 8, p: 3 }}
-    >
-      {/* TODO: "Back to Projects button > navigates home and to the #projects section" */}
+    <Box sx={{ maxWidth: 900, mx: "auto", mt: 8, p: 3 }}>
       <MarkdownRenderer markdown={markdown} />
     </Box>
   )

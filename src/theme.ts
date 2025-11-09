@@ -24,6 +24,7 @@ const theme = createTheme({
         },
         background: {
           default: "#1e1e1e",
+          paper: "#2c2c2c",
         },
         text: {
           primary: "#f5f5f5",
@@ -44,7 +45,7 @@ const theme = createTheme({
         },
         background: {
           default: "#f7f7f7",
-          paper: "#f0f0f0",
+          paper: "#e6e6e6",
         },
         text: {
           primary: "#1a1a1a",
@@ -68,6 +69,41 @@ const theme = createTheme({
           backgroundColor: theme.palette.mode === "light" ? "#e0e0e0" : "#454545",
         }),
       },
+    },
+
+    MuiCssBaseline: {
+      styleOverrides: (theme) => ({
+        // block code wrapper
+        pre: {
+          backgroundColor: theme.palette.background.paper,
+          color: theme.palette.text.primary,
+          padding: theme.spacing(2),
+          borderRadius: theme.shape.borderRadius,
+          overflowX: "auto",
+          border: `1px solid ${theme.palette.divider}`,
+          // ensure monospace child code inherits and displays properly
+          "& code": {
+            display: "block",
+            whiteSpace: "pre",
+            fontFamily:
+              "ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace",
+            fontSize: "0.9rem",
+            color: "inherit",
+            background: "transparent",
+            padding: 0,
+          },
+        },
+
+        // inline code styling
+        code: {
+          fontFamily:
+            "ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono', monospace",
+          fontSize: "0.9rem",
+          color: theme.palette.text.primary,
+          backgroundColor: theme.palette.action.hover,
+          padding: "2px 6px",
+        },
+      }),
     },
   },
 })
