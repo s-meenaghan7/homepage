@@ -4,7 +4,8 @@ import { useTheme } from "@mui/material/styles"
 import Tooltip from "@mui/material/Tooltip"
 import useMediaQuery from "@mui/material/useMediaQuery"
 import type { JSX } from "react"
-import { useNavigate } from "react-router"
+import { useLocation, useNavigate } from "react-router"
+import { scrollToSection } from "../../common"
 
 interface NavButtonProps {
   label: string
@@ -17,13 +18,20 @@ interface NavButtonProps {
 export function NavButton({ sectionId, label, active, icon, onClick }: NavButtonProps) {
   const theme = useTheme()
   const navigate = useNavigate()
+  const location = useLocation()
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"))
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"))
 
   const handleClick = () => {
+    // Call any additional onClick behavior (e.g., closing the NavDialog)
     if (onClick) {
       onClick()
     }
+    // If already on current page, scroll to the top of section
+    if (location.pathname === "/") {
+      scrollToSection(sectionId)
+    }
+
     navigate(`/#${sectionId}`)
   }
 
