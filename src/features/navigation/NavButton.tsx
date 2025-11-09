@@ -4,19 +4,28 @@ import { useTheme } from "@mui/material/styles"
 import Tooltip from "@mui/material/Tooltip"
 import useMediaQuery from "@mui/material/useMediaQuery"
 import type { JSX } from "react"
+import { useNavigate } from "react-router"
 
 interface NavButtonProps {
   label: string
   active: boolean
   sectionId: string
   icon: JSX.Element
-  onClick: (e: React.MouseEvent<HTMLButtonElement>, sectionId: string) => void
+  onClick?: () => void
 }
 
 export function NavButton({ sectionId, label, active, icon, onClick }: NavButtonProps) {
   const theme = useTheme()
+  const navigate = useNavigate()
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"))
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"))
+
+  const handleClick = () => {
+    if (onClick) {
+      onClick()
+    }
+    navigate(`/#${sectionId}`)
+  }
 
   if (isSmallScreen) {
     // Renders inside the NavDialog
@@ -24,7 +33,7 @@ export function NavButton({ sectionId, label, active, icon, onClick }: NavButton
       <Button
         size="large"
         startIcon={icon}
-        onClick={(e) => onClick(e, sectionId)}
+        onClick={handleClick}
         sx={{
           position: "relative",
           overflow: "visible",
@@ -44,7 +53,7 @@ export function NavButton({ sectionId, label, active, icon, onClick }: NavButton
     return (
       <Tooltip title={label}>
         <IconButton
-          onClick={(e) => onClick(e, sectionId)}
+          onClick={handleClick}
           sx={{
             color: "text.primary",
             fontWeight: active ? "bold" : "normal",
@@ -58,7 +67,7 @@ export function NavButton({ sectionId, label, active, icon, onClick }: NavButton
 
   return (
     <Button
-      onClick={(e) => onClick(e, sectionId)}
+      onClick={handleClick}
       sx={{
         position: "relative",
         overflow: "visible",

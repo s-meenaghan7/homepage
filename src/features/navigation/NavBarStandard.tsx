@@ -21,7 +21,6 @@ export function NavBarStandard({ navButtons, activeSection }: NavBarStandardProp
           label="Home"
           icon={homeButton.icon}
           sectionId={homeButton.id}
-          onClick={homeButton.onClick}
           active={activeSection === homeButton.id}
         />
       )}
@@ -50,7 +49,6 @@ export function NavBarStandard({ navButtons, activeSection }: NavBarStandardProp
             icon={btn.icon}
             label={btn.label}
             sectionId={btn.id}
-            onClick={btn.onClick}
             active={activeSection === btn.id}
           />
         ))}

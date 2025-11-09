@@ -4,6 +4,7 @@ import IconButton from "@mui/material/IconButton"
 import Toolbar from "@mui/material/Toolbar"
 import Tooltip from "@mui/material/Tooltip"
 import { useState } from "react"
+import { useNavigate } from "react-router"
 import { ColorSchemeToggle } from "./ColorSchemeToggle"
 import type { NavButtonConfig } from "./config"
 import { NavDialog } from "./NavDialog"
@@ -16,6 +17,7 @@ interface NavBarMobileProps {
 export function NavBarMobile({ navButtons, activeSection }: NavBarMobileProps) {
   const [open, setOpen] = useState(false)
   const [homeButton, ...navButtonConfigs] = navButtons
+  const navigate = useNavigate()
 
   const openDialog = () => {
     setOpen(true)
@@ -29,9 +31,7 @@ export function NavBarMobile({ navButtons, activeSection }: NavBarMobileProps) {
     <Toolbar sx={{ justifyContent: "space-between" }}>
       {homeButton && (
         <Tooltip title="Home">
-          <IconButton onClick={(e) => homeButton.onClick(e, homeButton.id)}>
-            {homeButton.icon}
-          </IconButton>
+          <IconButton onClick={() => navigate("/#intro")}>{homeButton.icon}</IconButton>
         </Tooltip>
       )}
 

@@ -7,8 +7,8 @@ import { Home } from "./Home"
 export default function App() {
   return (
     <>
-      <NavBarContainer />
       <Router>
+        <NavBarContainer />
         <Routes>
           <Route
             index
@@ -28,8 +28,8 @@ export default function App() {
             }
           />
         </Routes>
+        <Footer />
       </Router>
-      <Footer />
     </>
   )
 }
