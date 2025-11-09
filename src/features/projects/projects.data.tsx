@@ -15,6 +15,10 @@ const projectsData: ProjectOverviewProps[] = [
       "DataDog",
       "Docker",
     ],
+    caseStudyLink: {
+      slug: "7d34988f-1bed-46c5-b051-2a3d23c2fcf6",
+      text: "Read more on how I tackled scalability and maintainability challenges using two classic design patterns.",
+    },
   },
   {
     title: "Platform Communications System",
