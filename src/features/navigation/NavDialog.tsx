@@ -45,10 +45,7 @@ export function NavDialog({
               label={btn.label}
               sectionId={btn.id}
               active={activeSection === btn.id}
-              onClick={(e) => {
-                onClose()
-                btn.onClick(e, btn.id)
-              }}
+              onClick={() => onClose()}
             />
           ))}
         </Box>

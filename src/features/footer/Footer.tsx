@@ -64,7 +64,6 @@ export function Footer() {
                 id={link.id}
                 key={link.id}
                 label={link.label}
-                onClick={link.onClick}
               />
             ))}
           </FooterSection>
