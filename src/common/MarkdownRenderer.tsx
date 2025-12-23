@@ -3,6 +3,7 @@ import Link from "@mui/material/Link"
 import Typography from "@mui/material/Typography"
 import ReactMarkdown from "react-markdown"
 import rehypeRaw from "rehype-raw"
+import { CodeBlock } from "./CodeBlock"
 import { DetailsAccordion } from "./DetailsAccordion"
 
 export interface MarkdownRendererProps {
@@ -82,9 +83,7 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
               </Typography>
             </li>
           ),
-          code({ children }) {
-            return <code>{children}</code>
-          },
+          code: (props) => <CodeBlock {...(props as any)} />,
           details({ children }) {
             return <DetailsAccordion>{children}</DetailsAccordion>
           },
