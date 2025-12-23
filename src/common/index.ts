@@ -1,3 +1,4 @@
+export * from "./CodeBlock"
 export * from "./ContactButton"
 export * from "./DetailsAccordion"
 export * from "./EmailButton"
