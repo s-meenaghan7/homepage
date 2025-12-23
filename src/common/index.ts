@@ -1,4 +1,5 @@
 export * from "./ContactButton"
+export * from "./DetailsAccordion"
 export * from "./EmailButton"
 export * from "./FullScreenDialog"
 export * from "./GitHubButton"

@@ -2,6 +2,8 @@ import Box from "@mui/material/Box"
 import Link from "@mui/material/Link"
 import Typography from "@mui/material/Typography"
 import ReactMarkdown from "react-markdown"
+import rehypeRaw from "rehype-raw"
+import { DetailsAccordion } from "./DetailsAccordion"
 
 export interface MarkdownRendererProps {
   markdown: string
@@ -23,6 +25,7 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
       }}
     >
       <ReactMarkdown
+        rehypePlugins={[rehypeRaw]}
         components={{
           h1: ({ children }) => (
             <Typography
@@ -36,6 +39,8 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
             <Typography
               variant="h5"
               gutterBottom
+              fontWeight="bold"
+              pt={2}
             >
               {children}
             </Typography>
@@ -44,11 +49,20 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
             <Typography
               variant="h6"
               gutterBottom
+              fontWeight="bold"
+              pt={2}
             >
               {children}
             </Typography>
           ),
-          p: ({ children }) => <Typography variant="body1">{children}</Typography>,
+          p: ({ children }) => (
+            <Typography
+              pb={1}
+              variant="body1"
+            >
+              {children}
+            </Typography>
+          ),
           a: ({ href, children }) => (
             <Link
               href={href}
@@ -71,6 +85,10 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
           code({ children }) {
             return <code>{children}</code>
           },
+          details({ children }) {
+            return <DetailsAccordion>{children}</DetailsAccordion>
+          },
+          summary: ({ children }) => <>{children}</>, // ignored, handled by details
         }}
       >
         {markdown}
