@@ -32,6 +32,8 @@ export function VisitorCounter() {
   return (
     <Grid
       py={3}
+      display="flex"
+      justifyContent="center"
       justifyItems="center"
     >
       <Box
