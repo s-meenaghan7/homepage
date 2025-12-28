@@ -6,7 +6,7 @@ export function EmailButton() {
     <ContactButton
       title="Email me"
       icon={<Email />}
-      href="mailto:seanmeenaghan@email.com"
+      href="mailto:seanmeenaghan@gmail.com"
     />
   )
 }
