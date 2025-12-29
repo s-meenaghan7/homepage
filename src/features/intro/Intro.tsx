@@ -39,16 +39,20 @@ export function Intro() {
           spacing={2}
           sx={{ width: "100%", maxWidth: 600 }}
         >
-          <Box>
+          <Box
+            display="flex"
+            flexDirection="column"
+          >
             <Typography
-              variant={isSmallScreen ? "h3" : "h2"}
               gutterBottom
+              variant={isSmallScreen ? "h3" : "h2"}
               align={isMediumScreen ? "center" : "left"}
             >
               Sean Meenaghan
             </Typography>
 
             <Typography
+              pb={1}
               variant="h5"
               gutterBottom
               align={isMediumScreen ? "center" : "left"}
@@ -61,10 +65,12 @@ export function Intro() {
               sx={{ maxWidth: 600 }}
               align={isMediumScreen ? "center" : "left"}
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam illum
-              consequatur iusto fugit aliquam, exercitationem a recusandae ipsum
-              cupiditate amet corrupti beatae modi tenetur perspiciatis autem eius
-              veniam. Nisi, id.
+              I'm a software engineer focused on building reliable backend systems and
+              cloud-native applications. I started my career building automation-heavy
+              systems, which taught me how to design software that's reliable and
+              repeatable. Today, I'm channeling that experience into building
+              cloud-based applications on AWS with an emphasis on clean design and
+              long-term maintainability.
             </Typography>
           </Box>
 
@@ -82,14 +88,20 @@ export function Intro() {
         </Grid>
 
         {/* RIGHT: Picture */}
-        <Grid
+        {/*
+          TODO:
+          - take a new picture of present-day Sean Meenaghan
+          - add pic to this repository
+          - display picture by uncommenting the below Grid component
+        */}
+        {/* <Grid
           sx={{
             textAlign: "center",
           }}
         >
           <Box
             component="img"
-            src="/assets/temp_pro_pic.jpg"
+            src="TODO"
             alt="Picture of Sean Meenaghan"
             sx={{
               width: { xs: "70%", lg: "100%" },
@@ -99,7 +111,7 @@ export function Intro() {
               boxShadow: 3,
             }}
           />
-        </Grid>
+        </Grid> */}
       </Grid>
     </Box>
   )

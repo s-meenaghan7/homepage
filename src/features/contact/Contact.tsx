@@ -31,10 +31,11 @@ export function Contact() {
       <Typography
         variant="body1"
         align="center"
-        sx={{ maxWidth: "600px", mx: "auto", mb: 6 }}
+        sx={{ maxWidth: "700px", mx: "auto", mb: 6 }}
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa nam reiciendis
-        non ratione porro saepe adipisci voluptatum voluptatem explicabo! Debitis!
+        I would love to connect about work opportunities, to chat about software
+        engineering, or any of my (or your) past work and project experience! I am
+        active on LinkedIn and happy to connect there, too.
       </Typography>
 
       <Grid

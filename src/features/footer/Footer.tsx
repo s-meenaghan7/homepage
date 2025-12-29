@@ -47,8 +47,8 @@ export function Footer() {
               variant="body2"
               color="text.secondary"
             >
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt tenetur
-              neque est corporis.
+              Software engineer focused on building reliable backend systems and
+              cloud-native applications.
             </Typography>
 
             <Box>
