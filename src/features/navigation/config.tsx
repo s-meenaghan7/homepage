@@ -1,7 +1,6 @@
 import AutoStoriesOutlinedIcon from "@mui/icons-material/AutoStoriesOutlined"
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined"
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined"
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined"
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline"
 import type { JSX } from "react"
 
@@ -17,11 +16,11 @@ const navButtonsConfig: NavButtonConfig[] = [
     label: "Sean Meenaghan",
     icon: <HomeOutlinedIcon />,
   },
-  {
-    id: "about",
-    label: "About",
-    icon: <PersonOutlineOutlinedIcon />,
-  },
+  // {
+  //   id: "about",
+  //   label: "About",
+  //   icon: <PersonOutlineOutlinedIcon />,
+  // },
   {
     id: "experience",
     label: "Experience",

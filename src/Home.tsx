@@ -1,7 +1,7 @@
 import Container from "@mui/material/Container"
 import { useEffect } from "react"
 import { useLocation } from "react-router"
-import { About } from "./features/about"
+// import { About } from "./features/about"
 import { Contact } from "./features/contact"
 import { Experience } from "./features/experience"
 import { Intro } from "./features/intro"
@@ -29,7 +29,7 @@ export function Home() {
   return (
     <Container>
       <Intro />
-      <About />
+      {/* <About /> */}
       <Experience />
       <Projects />
       <Contact />
