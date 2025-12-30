@@ -44,7 +44,7 @@ const theme = createTheme({
           main: "#555555",
         },
         background: {
-          default: "#f7f7f7",
+          default: "#F0F4F8",
           paper: "#e6e6e6",
         },
         text: {
@@ -52,7 +52,7 @@ const theme = createTheme({
           secondary: "rgba(0,0,0,0.6)",
         },
         footer: {
-          bgColor: "#e0e0e0",
+          bgColor: "#d5d5d5",
         },
       },
     },
@@ -66,7 +66,7 @@ const theme = createTheme({
     MuiTextField: {
       styleOverrides: {
         root: ({ theme }) => ({
-          backgroundColor: theme.palette.mode === "light" ? "#e0e0e0" : "#454545",
+          backgroundColor: theme.palette.mode === "light" ? "#d5d5d5" : "#454545",
         }),
       },
     },
