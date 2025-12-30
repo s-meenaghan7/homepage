@@ -34,8 +34,8 @@ export function Contact() {
         sx={{ maxWidth: "700px", mx: "auto", mb: 6 }}
       >
         I would love to connect about work opportunities, to chat about software
-        engineering, or any of my (or your) past work and project experience! I am
-        active on LinkedIn and happy to connect there, too.
+        engineering, or work and project experience! I am active on LinkedIn and happy
+        to connect there, too.
       </Typography>
 
       <Grid

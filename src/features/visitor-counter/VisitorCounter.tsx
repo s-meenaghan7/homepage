@@ -9,12 +9,12 @@ interface VisitorCountResponse {
 export function VisitorCounter() {
   const [count, setCount] = useState<number | null>(null)
 
-  const API_URL: string = import.meta.env.VITE_API_URL
+  const VISITOR_API_URL: string = `${import.meta.env.VITE_API_URL}/visitor`
 
   useEffect(() => {
     async function fetchVisitorCount() {
       try {
-        const response = await fetch(API_URL, { method: "POST" })
+        const response = await fetch(VISITOR_API_URL, { method: "POST" })
         if (!response.ok) {
           throw new Error(`API error: ${response.status}`)
         }
@@ -27,7 +27,7 @@ export function VisitorCounter() {
     }
 
     fetchVisitorCount()
-  }, [API_URL])
+  }, [VISITOR_API_URL])
 
   return (
     <Grid
