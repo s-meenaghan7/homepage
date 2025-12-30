@@ -6,9 +6,8 @@ import Stack from "@mui/material/Stack"
 import { useTheme } from "@mui/material/styles"
 import Typography from "@mui/material/Typography"
 import useMediaQuery from "@mui/material/useMediaQuery"
-import { InfoBadge } from "../../common"
+import { InfoBadge, PhoneButton } from "../../common"
 import { EmailButton } from "../../common/EmailButton"
-import { GitHubButton } from "../../common/GitHubButton"
 import { LinkedInButton } from "../../common/LinkedInButton"
 
 export function ContactInformation() {
@@ -16,7 +15,11 @@ export function ContactInformation() {
   const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"))
 
   return (
-    <Grid justifyItems="center">
+    <Grid
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+    >
       <Typography
         variant="h6"
         gutterBottom
@@ -32,7 +35,7 @@ export function ContactInformation() {
           <>
             <EmailButton />
             <LinkedInButton />
-            <GitHubButton />
+            <PhoneButton />
           </>
         ) : (
           <>
@@ -40,7 +43,7 @@ export function ContactInformation() {
               title="Email"
               icon={<Email />}
               value="seanmeenaghan@gmail.com"
-              href="mailto:seanmeenaghan@email.com"
+              href="mailto:seanmeenaghan@gmail.com"
             />
             <InfoBadge
               title="LinkedIn"
