@@ -1,6 +1,6 @@
 import Email from "@mui/icons-material/Email"
-import GitHub from "@mui/icons-material/GitHub"
 import LinkedIn from "@mui/icons-material/LinkedIn"
+import PhoneIcon from "@mui/icons-material/Phone"
 import Grid from "@mui/material/Grid"
 import Stack from "@mui/material/Stack"
 import { useTheme } from "@mui/material/styles"
@@ -49,10 +49,10 @@ export function ContactInformation() {
               href="https://www.linkedin.com/in/seanmeenaghan/"
             />
             <InfoBadge
-              title="GitHub"
-              icon={<GitHub />}
-              value="github.com/s-meenaghan7"
-              href="https://github.com/s-meenaghan7"
+              title="Phone"
+              icon={<PhoneIcon />}
+              value="(360) 391-1345"
+              href="tel:+13603911345"
             />
           </>
         )}

@@ -41,7 +41,7 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
               variant="h5"
               gutterBottom
               fontWeight="bold"
-              pt={2}
+              pt={3}
             >
               {children}
             </Typography>
@@ -69,6 +69,7 @@ export function MarkdownRenderer({ markdown }: MarkdownRendererProps) {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
+              color="#0099ff"
             >
               {children}
             </Link>
