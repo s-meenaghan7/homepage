@@ -6,7 +6,7 @@ import { Contact } from "./features/contact"
 import { Experience } from "./features/experience"
 import { Intro } from "./features/intro"
 import { Projects } from "./features/projects"
-import { VisitorCounter } from "./features/visitor-counter"
+// import { VisitorCounter } from "./features/visitor-counter"
 
 export function Home() {
   const location = useLocation()
@@ -33,7 +33,7 @@ export function Home() {
       <Experience />
       <Projects />
       <Contact />
-      <VisitorCounter />
+      {/* <VisitorCounter /> */}
     </Container>
   )
 }
