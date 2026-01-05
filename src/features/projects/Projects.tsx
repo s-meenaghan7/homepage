@@ -1,5 +1,7 @@
+import Divider from "@mui/material/Divider"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
+import { Fragment } from "react"
 import { ProjectOverview } from "./ProjectOverview"
 import projectsData from "./projects.data"
 
@@ -37,16 +39,18 @@ export function Projects() {
       </Grid>
 
       <Grid
-        gap={2}
+        gap={1}
         display="flex"
         flexDirection="column"
       >
-        {projectsData.map((props, i) => (
-          <ProjectOverview
-            key={i}
-            {...props}
-          />
-        ))}
+        {projectsData.map((props, i) => {
+          return (
+            <Fragment key={i}>
+              <ProjectOverview {...props} />
+              {i + 1 < projectsData.length && <Divider variant="middle" />}
+            </Fragment>
+          )
+        })}
       </Grid>
     </Grid>
   )
