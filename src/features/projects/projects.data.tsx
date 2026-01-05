@@ -19,6 +19,7 @@ const projectsData: ProjectOverviewProps[] = [
       slug: "7d34988f-1bed-46c5-b051-2a3d23c2fcf6",
       text: "Read more on how I tackled scalability and maintainability challenges using two classic design patterns.",
     },
+    context: "professional",
   },
   {
     title: "Platform Communications System",
@@ -33,6 +34,7 @@ const projectsData: ProjectOverviewProps[] = [
       "GitHub API",
       "SMTP",
     ],
+    context: "professional",
   },
   {
     title: "Platform Operations Monitor",
@@ -45,6 +47,7 @@ const projectsData: ProjectOverviewProps[] = [
       "Atlassian Cloud APIs",
       "Data Center APIs",
     ],
+    context: "professional",
   },
 ]
 

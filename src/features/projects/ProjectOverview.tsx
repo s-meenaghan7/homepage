@@ -1,8 +1,8 @@
+import PersonIcon from "@mui/icons-material/Person"
+import WorkOutlineIcon from "@mui/icons-material/WorkOutline"
 import Chip from "@mui/material/Chip"
 import Grid from "@mui/material/Grid"
-import { useTheme } from "@mui/material/styles"
 import Typography from "@mui/material/Typography"
-import useMediaQuery from "@mui/material/useMediaQuery"
 import { CaseStudyLink, type CaseStudyLinkProps } from "./CaseStudyLink"
 
 export interface ProjectOverviewProps {
@@ -10,29 +10,32 @@ export interface ProjectOverviewProps {
   techStack: string[]
   description: string
   caseStudyLink?: CaseStudyLinkProps
+  context: "personal" | "professional"
 }
 
 export function ProjectOverview({
   title,
+  context,
   techStack,
   description,
   caseStudyLink,
 }: ProjectOverviewProps) {
-  const theme = useTheme()
-  const isMediumScreen = useMediaQuery(theme.breakpoints.down("md"))
-
   return (
     <Grid>
       <Grid
         py={2}
-        px={{ xs: 3, lg: 5 }}
-        border="1px solid lightgrey"
         borderRadius={3}
+        px={{ xs: 3, lg: 5 }}
+        border="2px solid lightgrey"
       >
         <Typography
+          gap={1}
           variant="h6"
-          align={isMediumScreen ? "center" : "left"}
+          display="flex"
+          alignItems="center"
+          justifyContent={{ lg: "left", xs: "center" }}
         >
+          {context === "professional" ? <WorkOutlineIcon /> : <PersonIcon />}
           {title}
         </Typography>
 
