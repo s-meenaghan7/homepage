@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
-import { ContactForm } from "./ContactForm"
+// import { ContactForm } from "./ContactForm"
 import { ContactInformation } from "./ContactInformation"
 
 export function Contact() {
@@ -33,9 +33,8 @@ export function Contact() {
         align="center"
         sx={{ maxWidth: "700px", mx: "auto", mb: 6 }}
       >
-        I would love to connect about work opportunities, to chat about software
-        engineering, or work and project experience! I am active on LinkedIn and happy
-        to connect there, too.
+        Interested in working together or have a question? Send a message and I'll get
+        back to you.
       </Typography>
 
       <Grid
@@ -43,9 +42,12 @@ export function Contact() {
         container
         width="100%"
         display="flex"
-        flexDirection={{ xs: "column-reverse", md: "row" }}
+        flexDirection="column"
+        // TODO: replace line 45 with 47 when adding the ContactForm back!
+        // flexDirection={{ xs: "column-reverse", md: "row" }}
+        pb={5}
       >
-        <ContactForm />
+        {/* <ContactForm /> */}
         <ContactInformation />
       </Grid>
     </Box>
