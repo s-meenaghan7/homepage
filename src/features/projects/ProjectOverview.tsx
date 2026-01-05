@@ -26,7 +26,6 @@ export function ProjectOverview({
         py={2}
         borderRadius={3}
         px={{ xs: 3, lg: 5 }}
-        border="2px solid lightgrey"
       >
         <Typography
           gap={1}
