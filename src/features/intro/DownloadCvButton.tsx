@@ -9,6 +9,11 @@ export function DownloadCvButton() {
       id="download-cv-btn"
       download="Sean Meenaghan - Resume"
       startIcon={<TaskOutlinedIcon />}
+      sx={{
+        whiteSpace: "nowrap",
+        minWidth: 0,
+        flexShrink: 1,
+      }}
     >
       Download CV
     </Button>

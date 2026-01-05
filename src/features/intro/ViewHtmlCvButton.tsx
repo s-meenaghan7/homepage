@@ -12,6 +12,11 @@ export function ViewHtmlCvButton() {
         variant="contained"
         onClick={() => setOpen(!open)}
         startIcon={<HtmlSvg />}
+        sx={{
+          whiteSpace: "nowrap",
+          minWidth: 0,
+          flexShrink: 1,
+        }}
       >
         View HTML CV
       </Button>
