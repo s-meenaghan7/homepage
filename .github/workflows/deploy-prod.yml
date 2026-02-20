@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   deploy:
+    environment: production
     runs-on: ubuntu-latest
 
     steps:
@@ -28,6 +29,8 @@ jobs:
         run: npm ci
 
       - name: Build application
+        env:
+          VITE_API_URL: ${{ secrets.API_URL }}
         run: npm run build
 
       - name: Configure AWS credentials
