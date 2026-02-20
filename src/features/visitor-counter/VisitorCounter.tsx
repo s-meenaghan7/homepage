@@ -1,4 +1,5 @@
 import Box from "@mui/material/Box"
+import CircularProgress from "@mui/material/CircularProgress"
 import Grid from "@mui/material/Grid"
 import { useEffect, useState } from "react"
 
@@ -6,10 +7,10 @@ interface VisitorCountResponse {
   count: number
 }
 
-export function VisitorCounter() {
+export function VisitorCounter({ pageId }: { pageId: string }) {
   const [count, setCount] = useState<number | null>(null)
 
-  const VISITOR_API_URL: string = `${import.meta.env.VITE_API_URL}/visitor`
+  const VISITOR_API_URL: string = `${import.meta.env.VITE_API_URL}/v1/visitor/${pageId}`
 
   useEffect(() => {
     async function fetchVisitorCount() {
@@ -34,15 +35,18 @@ export function VisitorCounter() {
       py={3}
       display="flex"
       justifyContent="center"
-      justifyItems="center"
+      alignItems="center"
     >
       <Box
         px={3}
         py={1}
         borderRadius={5}
         border="3px solid lightgrey"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
       >
-        {count}
+        {count !== null ? count : <CircularProgress size={22} />}
       </Box>
     </Grid>
   )
