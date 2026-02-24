@@ -2,6 +2,25 @@ import type { ProjectOverviewProps } from "./ProjectOverview"
 
 const projectsData: ProjectOverviewProps[] = [
   {
+    title: "Homepage & Cloud Resume Challenge",
+    description:
+      "Professional website built with React, TypeScript, and Material UI. Deployed to AWS with GitHub Actions. Features a serverless backend managed through Terraform and Lambda functions powered by Go. Built as part of the Cloud Resume Challenge.",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Material UI",
+      "Go",
+      "AWS",
+      "GitHub Actions",
+      "Terraform",
+    ],
+    caseStudyLink: {
+      slug: "cloud-resume-challenge",
+      text: "Read more about my experience building this project and completing the Cloud Resume Challenge.",
+    },
+    context: "personal",
+  },
+  {
     title: "Hardware Failure Detection System",
     description:
       'Hardware incident handling automation. Leveraged a system of "rules" to accurately troubleshoot, identify potential problems, and take action, i.e., dispatch a hardware technician. Integrated with ServiceNow for incident management, Splunk for log analysis, and Slack for team communications.',
