@@ -35,7 +35,7 @@ const projectsData: ProjectOverviewProps[] = [
       "Docker",
     ],
     caseStudyLink: {
-      slug: "7d34988f-1bed-46c5-b051-2a3d23c2fcf6",
+      slug: "design-patterns-refactor",
       text: "Read more on how I tackled scalability and maintainability challenges using two classic design patterns.",
     },
     context: "professional",
