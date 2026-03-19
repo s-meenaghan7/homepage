@@ -3,7 +3,7 @@ import CircularProgress from "@mui/material/CircularProgress"
 import Typography from "@mui/material/Typography"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
-import { MarkdownRenderer } from "../../common/MarkdownRenderer"
+import { MarkdownRenderer } from "../blog/MarkdownRenderer"
 
 export function CaseStudy() {
   const { slug } = useParams<{ slug: string }>()

@@ -14,6 +14,21 @@ export class MarkdownContent {
   }
 
   /**
+   * Returns the markdown slug for a given text, which can be used as an ID link in markdown headers. This is done by:
+   * - converting the text to lowercase
+   * - replacing non-word characters with hyphens
+   * - trimming leading and trailing hyphens.
+   * @param text the text to render as a markdown slug link.
+   * @returns the markdown slug as an ID link
+   */
+  static slugify(text: string): string {
+    return text
+      .toLowerCase()
+      .replace(/[^\w]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+  }
+
+  /**
    * Parses the markdown content and generates an array of Table of Contents headings. It supports multiple levels of headings and formats them as a nested list.
    * @returns The generated table of contents.
    */
@@ -43,10 +58,7 @@ export class MarkdownContent {
       headingStack.push(level)
 
       let indent = "  ".repeat(headingStack.length - 1)
-      let slug = title
-        .toLowerCase()
-        .replace(/[^\w]+/g, "-")
-        .replace(/^-+|-+$/g, "")
+      let slug = MarkdownContent.slugify(title)
       tocLines.push(`${indent}- [${title}](#${slug})`)
     }
     this.tableOfContents = tocLines
