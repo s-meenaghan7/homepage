@@ -18,7 +18,7 @@ export function Intro() {
       id="intro"
       sx={{
         display: "flex",
-        minHeight: "100vh",
+        minHeight: "90vh",
         alignItems: "center",
         justifyContent: "center",
         px: { xs: 2, sm: 4, md: 5 },

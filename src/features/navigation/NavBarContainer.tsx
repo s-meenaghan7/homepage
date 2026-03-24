@@ -14,7 +14,7 @@ export function NavBarContainer() {
 
   return (
     <AppBar
-      position="fixed"
+      position="sticky"
       elevation={0}
       sx={(theme) => ({
         backgroundColor: alpha(theme.palette.background.paper, 0.8),
