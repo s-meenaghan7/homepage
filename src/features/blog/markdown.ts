@@ -3,7 +3,7 @@
  */
 export class MarkdownContent {
   private markdown: string
-  private tableOfContents: string[] | undefined = undefined
+  private headings: Map<string, string> | undefined = undefined
 
   /**
    * Creates an instance of MarkdownContent.
@@ -32,17 +32,17 @@ export class MarkdownContent {
    * Parses the markdown content and generates an array of Table of Contents headings. It supports multiple levels of headings and formats them as a nested list.
    * @returns The generated table of contents.
    */
-  tocHeadings(): string[] {
-    if (this.tableOfContents) {
-      return this.tableOfContents
+  tocHeadings(): Map<string, string> {
+    if (this.headings) {
+      return this.headings
     }
 
-    let lines = this.markdown.split("\n")
-    let tocLines: string[] = []
+    let headingsMap = new Map<string, string>()
     let headingStack: number[] = []
+    let lines = this.markdown.split("\n")
 
     for (let line of lines) {
-      let match = line.match(/^(#+)\s+(.*)/)
+      let match = line.match(/^(##+)\s+(.*)/)
       if (!match) continue
 
       let level = match[1].length
@@ -57,12 +57,13 @@ export class MarkdownContent {
 
       headingStack.push(level)
 
-      let indent = "  ".repeat(headingStack.length - 1)
+      // TODO: indent is commented out for now since we aren't currently supporting nested headings in the table of contents, but we should add it back in once we do.
+      // let indent = "  ".repeat(headingStack.length - 1)
       let slug = MarkdownContent.slugify(title)
-      tocLines.push(`${indent}- [${title}](#${slug})`)
+      headingsMap.set(title, slug)
     }
-    this.tableOfContents = tocLines
+    this.headings = headingsMap
 
-    return this.tableOfContents
+    return this.headings
   }
 }
