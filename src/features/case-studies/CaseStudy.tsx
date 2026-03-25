@@ -3,7 +3,9 @@ import CircularProgress from "@mui/material/CircularProgress"
 import Typography from "@mui/material/Typography"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
+import { MarkdownContent } from "../blog"
 import { MarkdownRenderer } from "../blog/MarkdownRenderer"
+import { TableOfContents } from "./TableOfContents"
 
 export function CaseStudy() {
   const { slug } = useParams<{ slug: string }>()
@@ -49,8 +51,28 @@ export function CaseStudy() {
   }
 
   return (
-    <Box sx={{ maxWidth: 900, mx: "auto", mt: 8, p: 3 }}>
-      <MarkdownRenderer markdown={markdown} />
+    <Box
+      pt={3}
+      pb={3}
+      gap={4}
+      display="flex"
+      flexDirection="row"
+      justifyContent="center"
+    >
+      <Box
+        component="aside"
+        sx={{
+          top: 75,
+          flexShrink: 0,
+          position: "sticky",
+          height: "fit-content",
+        }}
+      >
+        <TableOfContents headings={new MarkdownContent(markdown).tocHeadings()} />
+      </Box>
+      <Box sx={{ maxWidth: 900 }}>
+        <MarkdownRenderer markdown={markdown} />
+      </Box>
     </Box>
   )
 }
