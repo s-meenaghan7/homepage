@@ -29,7 +29,7 @@ export class MarkdownContent {
   }
 
   /**
-   * Parses the markdown content and generates an array of Table of Contents headings. It supports multiple levels of headings and formats them as a nested list.
+   * Parses the markdown content and generates an array of Table of Contents headings. It supports multiple levels of headings and formats them as a nested list. The h1 headings are ignored since they are reserved for the case study title; only h2 and below are included in the table of contents.
    * @returns The generated table of contents.
    */
   tocHeadings(): Map<string, string> {
