@@ -25,7 +25,7 @@ export function ResumeDialog({ open, onClose }: ResumeDialogProps) {
       >
         <Box
           display="flex"
-          padding="1rem 2rem"
+          padding="1rem 0.75rem"
           fontSize="small"
           minHeight="100vh"
           bgcolor="#f4f5f7"
@@ -33,17 +33,21 @@ export function ResumeDialog({ open, onClose }: ResumeDialogProps) {
           alignItems="flex-start"
           sx={{ overflowY: "auto" }}
         >
-          <Box justifyItems="center">
+          <Box
+            display="grid"
+            justifyItems="center"
+          >
             <Typography
               color="grey"
               gutterBottom
               align="center"
               maxWidth="650px"
+              fontSize={{ xs: "0.75rem", sm: "0.875rem", md: "1rem" }}
               fontStyle="italic"
             >
               This HTML resume is included as part of the{" "}
               <StyledLink
-                text="AWS Cloud Resume Challenge"
+                text="Cloud Resume Challenge"
                 href="https://cloudresumechallenge.dev/docs/the-challenge/aws/"
               />
               . Download my CV instead to ensure you receive the most current copy.

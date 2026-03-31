@@ -34,11 +34,11 @@ export function HtmlResume() {
         <h2>Summary</h2>
         <ul>
           <li>
-            Backend-focused software engineer with 2+ years professional experience in
-            software development lifecycle and systems engineering. My background is
-            primarily backend development, business process automation, system
-            integrations, platform administration, automated testing, and CICD
-            pipelines.
+            Backend-leaning software engineer with 2+ years professional experience and
+            4+ years in related tech roles. The core of my experience is in building
+            system integrations, business process automation, Atlassian platform
+            administration, automated testing, and CICD pipelines. Experienced with AWS
+            and passionate about growing cloud engineering skills.
           </li>
         </ul>
       </section>
@@ -53,14 +53,14 @@ export function HtmlResume() {
           <p>December 2023 - July 2005</p>
           <ul>
             <li>
-              Developed system integrations, business process automations, and CLI tools
-              using <strong>TypeScript</strong> and <strong>Python</strong> to
-              streamline the administration of platforms, significantly reducing manual
-              effort and operational costs.
+              Developed REST API-driven system integrations, business process
+              automations, and CLI tools using <strong>TypeScript</strong> and{" "}
+              <strong>Python</strong> to streamline the administration of platforms,
+              significantly reducing manual effort and operational costs.
             </li>
             <li>
               System administrator of Atlassian Jira & Confluence, supporting over 5,000
-              users each.
+              users.
             </li>
             <li>
               Major contributor to Atlassian Cloud Migration project to unlock new
@@ -72,7 +72,6 @@ export function HtmlResume() {
               management and access control in Atlassian Cloud, reducing group sync
               overhead by 98.5% (~100k groups down to ~1.5k).
             </li>
-
             <li>
               Developed a full stack mass-email system, providing a simple user
               interface in Jira for platform admins to mass-email users of Jira,
@@ -98,12 +97,6 @@ export function HtmlResume() {
               scheduled via <strong>GitHub Actions</strong>.
             </li>
             <li>
-              Pioneered adoption of <strong>Atlassian Forge</strong> to support
-              company-wide Atlassian Cloud migration, enabling the development of custom
-              cloud-compatible solutions and establishing foundational knowledge for
-              future Jira Cloud extensibility.
-            </li>
-            <li>
               Developed a custom CLI tool to extract audit logs from Jira and Confluence
               Cloud, formatting them for ingestion by a Splunk Universal Forwarder to
               meet security compliance requirements.
@@ -120,18 +113,10 @@ export function HtmlResume() {
               testing the most critical & high-impact components of code.
             </li>
             <li>
-              Contributed consistently to code reviews to promote high coding standards
-              and collaborative solution design across the engineering team.
-            </li>
-            <li>
-              Contributed to formal change management processes, ensuring production
-              changes were safe, well-documented, and communicated effectively to
-              minimize downtime and user disruption.
-            </li>
-            <li>
-              Created and maintained detailed documentation on software tools,
-              applications, automations, and team/operational SOPs to proactively reduce
-              and prevent technical debt.
+              Pioneered adoption of <strong>Atlassian Forge</strong> to support
+              company-wide Atlassian Cloud migration, enabling the development of custom
+              cloud-compatible solutions and establishing foundational knowledge for
+              future Jira Cloud extensibility.
             </li>
           </ul>
         </div>
@@ -142,11 +127,6 @@ export function HtmlResume() {
           </p>
           <p>July 2023 - December 2023</p>
           <ul>
-            <li>
-              Demonstrated advanced coding proficiency and understanding of the software
-              development lifecycle, leading to an in-line promotion to Software
-              Engineer.
-            </li>
             <li>
               Created <strong>Python automations</strong> that eliminated manual
               processes at the Service Desk, driving operational efficiency and
@@ -176,9 +156,14 @@ export function HtmlResume() {
               technical growth and improved performance.
             </li>
             <li>
-              Worked in an <strong>Agile</strong> environment using Jira for sprint
-              planning, daily standups, and retrospectives to drive continuous
+              Worked within <strong>Agile</strong> methodology leveraging Jira for
+              sprint planning, daily standups, and retrospectives to drive continuous
               improvement and team alignment.
+            </li>
+            <li>
+              Demonstrated advanced coding proficiency and understanding of the software
+              development lifecycle, leading to an in-line promotion to Software
+              Engineer.
             </li>
           </ul>
         </div>
@@ -218,9 +203,9 @@ export function HtmlResume() {
         <h2>Skills</h2>
         <ul>
           <li>
-            TypeScript, Node.js, React.js, Python, Java, git, GitHub Actions, CICD, OOP,
-            OOD, Jira admin, Confluence admin, Atlassian Cloud admin, ServiceNow,
-            DataDog, Splunk, SQL, Agile
+            TypeScript, Python, Go, React.js, Terraform, git, GitHub Actions, Atlassian
+            Jira administration, Atlassian Cloud administration, CICD, OOP, SQL, Agile,
+            AWS (IAM, S3, CloudFront, Lambda, API Gateway, DynamoDB)
           </li>
         </ul>
       </section>
